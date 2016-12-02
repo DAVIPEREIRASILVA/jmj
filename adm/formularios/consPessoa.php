@@ -58,7 +58,7 @@ $total = mysql_num_rows($dados);
 
  				<div id="divPessoas">
  					<div>
- 						<p align="center"><h2>Cadastro de Jovens</h2></p>
+ 						<p align="center"><h2>Jovens cadastrados: <?php echo $total;?></h2></p>
  						<table border="1" align="left">
  							<thead>
  								<tr bgcolor="#708090" style="color:#ffffff;">
