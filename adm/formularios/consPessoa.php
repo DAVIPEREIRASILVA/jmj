@@ -3,7 +3,7 @@
 include '../../php/conexao_mysql.php';
 
 // cria a instrução SQL que vai selecionar os dados da query1
-$query = sprintf("SELECT * FROM PESSOA ORDER BY NOME");
+$query = sprintf("SELECT * FROM PESSOA ORDER BY COMUNIDADE, NOME");
 // executa a query
 $dados = mysql_query($query, $con) or die(mysql_error());
 // transforma os dados em um array
@@ -63,6 +63,9 @@ $total = mysql_num_rows($dados);
  							<thead>
  								<tr bgcolor="#708090" style="color:#ffffff;">
  									<td style="vertical-align: middle;" align="center" color="#ffffff">
+ 										Com
+ 									</td>
+ 									<td style="vertical-align: middle;" align="center" color="#ffffff">
  										Nome
  									</td>
  									<td style="vertical-align: middle;" align="center" >
@@ -80,7 +83,8 @@ $total = mysql_num_rows($dados);
 		// inicia o loop que vai mostrar todos os dados
 		do {
 ?>
-<tr><td><?=$linha['NOME']?></td>
+<tr><td><?=$linha['COMUNIDADE']?></td>
+<td><?=$linha['NOME']?></td>
 <td><?=$linha['TEL_FIXO']?></td>
 <td style="vertical-align: middle;" align="center"><a href="#" onclick="detalhePessoa('<?=$linha['ID_PESSOA']?>')"><img src="../images/cadastro.png"></a></td></tr>
 <?php
