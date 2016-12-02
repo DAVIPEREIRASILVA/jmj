@@ -85,7 +85,7 @@ $total = mysql_num_rows($dados);
 ?>
 <tr><td><?=$linha['COMUNIDADE']?></td>
 <td><?=$linha['NOME']?></td>
-<td><?=$linha['TEL_FIXO']?></td>
+<td><?=$linha['CELULAR']?></td>
 <td style="vertical-align: middle;" align="center"><a href="#" onclick="detalhePessoa('<?=$linha['ID_PESSOA']?>')"><img src="../images/cadastro.png"></a></td></tr>
 <?php
 		// finaliza o loop que vai mostrar os dados
