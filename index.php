@@ -46,7 +46,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-12">
-                            <h2>EIS AQUI A SERVA DO SENHOR. FAÇA-SE EM MIM SEGUNDO TUA PALAVRA</h2>
+                            <h2>EIS AQUI A SERVA DO SENHOR. FAÇA-SE EM MIM SEGUNDO TUA PALAVRA!</h2>
                             <p>Deus espera algo de você. Deus quer algo que venha de você. Deus está esperando por você. Ele quer que suas mãos continuem a construir o mundo de hoje</p>
                         </div>
                     </div>
