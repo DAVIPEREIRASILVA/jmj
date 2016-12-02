@@ -1,0 +1,115 @@
+$(document).ready(function () {
+});
+
+
+function salvarPessoa(){
+
+	if(document.getElementById('hdnIdPessoa').value!=''){	
+		dados="";
+		
+		dados = "hdnIdPessoa=" + document.getElementById('hdnIdPessoa').value;
+		dados += "&txtNome=" + document.getElementById('txtNome').value;
+		dados += "&cboSexo=" + document.getElementById('cboSexo').value;
+		dados += "&txtDtNasc=" + document.getElementById('txtDtNasc').value;
+		dados += "&cboComunidade=" + document.getElementById('cboComunidade').value;
+		dados += "&txtTelFixo=" + document.getElementById('txtTelFixo').value;
+		dados += "&txtTelCel=" + document.getElementById('txtTelCel').value;
+		dados += "&txtEmail=" + document.getElementById('txtEmail').value;
+		dados += "&txtNomeResponsavel=" + document.getElementById('txtNomeResponsavel').value;
+		dados += "&txtCelResponsavel=" + document.getElementById('txtCelResponsavel').value;
+
+		var varResposta = chamar_ajax('../../php/sql.php', 'filtro=upDatePessoa&'+dados, false, 'text', null);
+		if (varResposta==1){
+			alert('Cadastro Efetuado com sucesso!');
+			window.open("http://guarulhosjmj2019.esy.es/", "_self");
+		}
+	}else{	
+		dados = "txtNome=" + document.getElementById('txtNome').value;
+		dados += "&cboSexo=" + document.getElementById('cboSexo').value;
+		dados += "&txtDtNasc=" + document.getElementById('txtDtNasc').value;
+		dados += "&cboComunidade=" + document.getElementById('cboComunidade').value;
+		dados += "&txtTelFixo=" + document.getElementById('txtTelFixo').value;
+		dados += "&txtTelCel=" + document.getElementById('txtTelCel').value;
+		dados += "&txtEmail=" + document.getElementById('txtEmail').value;
+		dados += "&txtNomeResponsavel=" + document.getElementById('txtNomeResponsavel').value;
+		dados += "&txtCelResponsavel=" + document.getElementById('txtCelResponsavel').value;
+		
+			var varResposta = chamar_ajax('../php/sql.php', 'filtro=cadPessoa&'+dados, false, 'text', null);
+			if (varResposta==1){
+				alert('Cadastro Efetuado com sucesso!');
+				window.open("http://guarulhosjmj2019.esy.es/", "_self");
+			}
+		}
+}
+
+
+function exibeFormSolteiro(){
+	$("#divFormSolteiro").show('fast');
+	$("#divFormCasal").hide('fast');
+	};
+
+	function exibeFormCasal(){
+		$("#divFormCasal").show('fast');
+		$("#divFormSolteiro").hide('fast');
+		};		
+		
+		
+function verificamenor(){
+	
+	nascimento= document.getElementById('txtDtNasc').value;
+	limite= "2001-03-31";
+	
+	if (nascimento > limite){
+		alert('Provavelmente você será de menor na JMJ, favor cadastrar os dados de um responsável');
+		
+		$("#trDadosResponsavel").show('fast');
+		$("#trNomeResponsavel").show('fast');
+		$("#trCelResponsavel").show('fast');
+	}
+}
+
+function abrirFilhos(){
+	$("#trFilho1").hide('fast');
+	$("#trFilho2").hide('fast');
+	$("#trFilho3").hide('fast');
+	$("#trFilho4").hide('fast');
+	$("#trFilho5").hide('fast');	
+	
+	if(document.getElementById('cboFilhos').value == 1){
+		$("#trFilho1").show('fast');		
+	}else{if(document.getElementById('cboFilhos').value == 2){
+		$("#trFilho1").show('fast');
+		$("#trFilho2").show('fast');
+		}else{if(document.getElementById('cboFilhos').value == 3){
+			$("#trFilho1").show('fast');
+			$("#trFilho2").show('fast');
+			$("#trFilho3").show('fast');
+			}else{if(document.getElementById('cboFilhos').value == 4){
+				$("#trFilho1").show('fast');
+				$("#trFilho2").show('fast');
+				$("#trFilho3").show('fast');
+				$("#trFilho4").show('fast');
+				}else{
+					if(document.getElementById('cboFilhos').value == 5){
+						$("#trFilho1").show('fast');
+						$("#trFilho2").show('fast');
+						$("#trFilho3").show('fast');
+						$("#trFilho4").show('fast');
+						$("#trFilho5").show('fast');
+						}
+					}
+				
+				}
+			
+		}	
+	}
+}
+
+
+function detalhePessoa(det){
+	window.open("detPessoa.php?idPessoa="+det,"_self");
+}
+
+
+
+
