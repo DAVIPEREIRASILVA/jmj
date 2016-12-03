@@ -10,6 +10,9 @@ switch ($_POST ["filtro"]) {
     case 'upDatePessoa':
         upDatePessoa();
         break;
+    case 'cadCasal':
+      	cadCasal();
+       	break;
 
     
     default:
