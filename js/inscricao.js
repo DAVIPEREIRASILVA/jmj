@@ -74,6 +74,9 @@ function detalhePessoa(det){
 	window.open("detPessoa.php?idPessoa="+det,"_self");
 }
 
+function detalheCasal(det){
+	window.open("detPessoa.php?idCasal="+det,"_self");
+}
 
 
 

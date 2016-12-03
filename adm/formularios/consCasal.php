@@ -86,7 +86,7 @@ $total = mysql_num_rows($dados);
 <tr><td><?=$linha['COMUNIDADE']?></td>
 <td><?=$linha['NOME_ESPOSO']?></td>
 <td><?=$linha['CELULAR']?></td>
-<td style="vertical-align: middle;" align="center"><a href="#" onclick="detalhePessoa('<?=$linha['ID_CASAL']?>')"><img src="../images/cadastro.png"></a></td></tr>
+<td style="vertical-align: middle;" align="center"><a href="#" onclick="detalheCasal('<?=$linha['ID_CASAL']?>')"><img src="../images/cadastro.png"></a></td></tr>
 <?php
 		// finaliza o loop que vai mostrar os dados
 		}while($linha = mysql_fetch_assoc($dados));
