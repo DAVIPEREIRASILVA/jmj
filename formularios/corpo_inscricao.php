@@ -19,7 +19,7 @@ $total = mysql_num_rows($dados);
 
 $query1 = sprintf("SELECT * FROM CASAL WHERE ID_CASAL='$idCasal' ORDER BY NOME_ESPOSO");
 // executa a query
-$dados1 = mysql_query($query1, $con1) or die(mysql_error());
+$dados1 = mysql_query($query1, $con) or die(mysql_error());
 // transforma os dados em um array
 $linha1 = mysql_fetch_assoc($dados1);
 // calcula quantos dados retornaram
