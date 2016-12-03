@@ -95,36 +95,36 @@ $total1 = mysql_num_rows($dados1);
 	  		
 	  		
 <!-- *******************Início Formulário dos Casados*************************** -->	  		
-	    <div id="divFormCasal" <?=($linha['ID_CASAL']!=''?'style="display:block"':'style="display:none"')?>>
-	    <input type="hidden" id="hdnIdCasal" value="<?=$linha['ID_CASAL']?>">
+	    <div id="divFormCasal" <?=($linha1['ID_CASAL']!=''?'style="display:block"':'style="display:none"')?>>
+	    <input type="hidden" id="hdnIdCasal" value="<?=$linha1['ID_CASAL']?>">
                 <table border="0" cellspacing="0" cellpadding="2" align="center">
                 <caption><h3>Formulario de Inscricao- Casal</h3></caption>
                 <tbody>	
                 	<tr>
                 		<td>Nome do Esposo:</td>
-                		<td colspan="2"><input type="text" id="txtNomeEsposo" size="25"></td>
+                		<td colspan="2"><input type="text" id="txtNomeEsposo" size="25" value="<?=$linha1['NOME_ESPOSO']?>"></td>
                 	</tr>
                 	<tr>
                 		<td>Nome da Esposa:</td>
-                		<td colspan="2"><input type="text" id="txtNomeEsposa" size="25"></td>
+                		<td colspan="2"><input type="text" id="txtNomeEsposa" size="25" value="<?=$linha1['NOME ESPOSA']?>"></td>
                 	</tr>
                 	<tr>
 			        	<td>
 			        		Comun:
 			        	</td>
-			        	<td  colspan="2">
-			        		<select id="cboComunidadeCasal">
-			                				<option value="1">1&ordf; Comunidade</option>
-			                				<option value="2">2&ordf; Comunidade</option>
-			                				<option value="3">3&ordf; Comunidade</option>
-			                				<option value="4">4&ordf; Comunidade</option>
-			                				<option value="5">5&ordf; Comunidade</option>
-			                				<option value="6">6&ordf; Comunidade</option>
-			                				<option value="7">7&ordf; Comunidade</option>
-			                				<option value="8">8&ordf; Comunidade</option>
-			                				<option value="9">9&ordf; Comunidade</option>
-			                				<option value="10">10&ordf; Comunidade</option>
-			                				<option value="11"11&ordf; Comunidade</option>
+			        	<td  colspan="4">
+			        		<select id="cboComunidade">
+			                				<option value="1" <?=($linha1['COMUNIDADE']=='1'?'Selected':'')?>>1&ordf; Comunidade</option>
+			                				<option value="2" <?=($linha1['COMUNIDADE']=='2'?'Selected':'')?> >2&ordf; Comunidade</option>
+			                				<option value="3" <?=($linha1['COMUNIDADE']=='3'?'Selected':'')?>>3&ordf; Comunidade</option>
+			                				<option value="4" <?=($linha1['COMUNIDADE']=='4'?'Selected':'')?>>4&ordf; Comunidade</option>
+			                				<option value="5" <?=($linha1['COMUNIDADE']=='5'?'Selected':'')?>>5&ordf; Comunidade</option>
+			                				<option value="6" <?=($linha1['COMUNIDADE']=='6'?'Selected':'')?>>6&ordf; Comunidade</option>
+			                				<option value="7" <?=($linha1['COMUNIDADE']=='7'?'Selected':'')?>>7&ordf; Comunidade</option>
+			                				<option value="8" <?=($linha1['COMUNIDADE']=='8'?'Selected':'')?>>8&ordf; Comunidade</option>
+			                				<option value="9" <?=($linha1['COMUNIDADE']=='9'?'Selected':'')?>>9&ordf; Comunidade</option>
+			                				<option value="10" <?=($linha1['COMUNIDADE']=='10'?'Selected':'')?>>10&ordf; Comunidade</option>
+			                				<option value="11" <?=($linha1['COMUNIDADE']=='11'?'Selected':'')?>>11&ordf; Comunidade</option>
 			                			</select>
 			            </td>
 			        </tr>
@@ -133,7 +133,7 @@ $total1 = mysql_num_rows($dados1);
 			                Tel Fixo:
 			            </td>
 			            <td colspan="2">    
-			                <input type="text" id="txtTelFixoCasal" size="25">
+			                <input type="text" id="txtTelFixoCasal" size="25" value="<?=$linha1['TEL_FIXO']?>">
 			            </td>
 			       </tr>
 			        <tr>
@@ -141,7 +141,7 @@ $total1 = mysql_num_rows($dados1);
 			                Celular:
 			            </td>
 			            <td colspan="2">    
-			                <input type="text" id="txtTelCelCasal"  size="25">
+			                <input type="text" id="txtTelCelCasal"  size="25" value="<?=$linha1['CELULAR']?>">
 			            </td>
 			       </tr>
 			        <tr>
@@ -149,7 +149,7 @@ $total1 = mysql_num_rows($dados1);
 			                Email:
 			            </td>
 			            <td colspan="2">    
-			                <input type="text" id="txtEmailCasal" size="25">
+			                <input type="text" id="txtEmailCasal" size="25"  value="<?=$linha1['EMAIL']?>">
 			            </td>
 			       </tr>
 			       </tr>
@@ -159,9 +159,9 @@ $total1 = mysql_num_rows($dados1);
 			        	</td>
 			        	<td  colspan="2">
 			        		<select id="cboIntencaoCasal">
-			                				<option value="1">Apenas ajudar</option>
-			                				<option value="2">Apenas ir</option>
-			                				<option value="3">Ajudar e ir</option>
+			                				<option value="1" <?=($linha1['INTENCAO']=='1'?'Selected':'')?>>Apenas ajudar</option>
+			                				<option value="2" <?=($linha1['INTENCAO']=='2'?'Selected':'')?>>Apenas ir</option>
+			                				<option value="3" <?=($linha1['INTENCAO']=='3'?'Selected':'')?>>Ajudar e ir</option>
 
 			                			</select>
 			            </td>
