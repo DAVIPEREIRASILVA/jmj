@@ -97,7 +97,7 @@ function salvarCasal(){
 			window.open("http://guarulhosjmj2019.esy.es/", "_self");
 		}
 	}else{	
-		dados += "txtNomeEsposo=" + document.getElementById('txtNomeEsposo').value;
+		dados = "txtNomeEsposo=" + document.getElementById('txtNomeEsposo').value;
 		dados += "&txtNomeEsposa=" + document.getElementById('txtNomeEsposa').value;
 		dados += "&cboComunidadeCasal=" + document.getElementById('cboComunidadeCasal').value;
 		dados += "&txtTelFixoCasal=" + document.getElementById('txtTelFixoCasal').value;
