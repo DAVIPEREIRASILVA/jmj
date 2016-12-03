@@ -76,22 +76,11 @@ $total = mysql_num_rows($dados);
 	  		
 	  		
 <!-- *******************Início Formulário dos Casados*************************** -->	  		
-
-  		
-	  		
-	  		
-	  		
- 	  		
-	  		    <div id="divFormCasal" style="display:none">
-	  		    
-<table border="0" cellspacing="0" cellpadding="2" align="center">
-        <caption><h3>Em contru&ccedil;&atilde;o</h3></caption>	  		
-</table>	
-<!--	  		    
+	    <div id="divFormCasal" <?=($linha['ID_CASAL']!=''?'style="display:block"':'style="display:none"')?>>
+	    <input type="hidden" id="hdnIdCasal" value="<?=$linha['ID_CASAL']?>">
                 <table border="0" cellspacing="0" cellpadding="2" align="center">
                 <caption><h3>Formulario de Inscricao- Casal</h3></caption>
                 <tbody>	
-                	
                 	<tr>
                 		<td>Nome do Esposo:</td>
                 		<td colspan="2"><input type="text" id="txtNomeEsposo" size="25"></td>
@@ -125,7 +114,7 @@ $total = mysql_num_rows($dados);
 			                Tel Fixo:
 			            </td>
 			            <td colspan="2">    
-			                <input type="text" id="txtTelFixoCasa" size="25">
+			                <input type="text" id="txtTelFixoCasal" size="25">
 			            </td>
 			       </tr>
 			        <tr>
@@ -144,72 +133,27 @@ $total = mysql_num_rows($dados);
 			                <input type="text" id="txtEmailCasal" size="25">
 			            </td>
 			       </tr>
-			       <tr>
-			       		<td colspan="3">
-			       			Quantidade de filhos que pretente levar na JMJ <br/>
-			       			(Apenas os que nao estarao em comunidade)
-			       		</td>
 			       </tr>
-			       <tr>		
-			       		<td>
-			       			<select id="cboFilhos" onchange="abrirFilhos()">
-			       				<option value="0">0</option>
-			       				<option value="1">1</option>
-			       				<option value="2">2</option>
-			       				<option value="3">3</option>
-			       				<option value="4">4</option>
-			       				<option value="5">5</option>
-			       			</select>
-			       		</td>
-			       </tr>
-			       <tr id="trFilho1" style="display:none">		
-			       		<td  colspan="1">
-			       			Idade filho 1
-			       		</td>
-			       		<td>
-			       			<input type="text" id="txtIdadeF1" size="2">			
-			       		</td>
-			       </tr>
-			       <tr id="trFilho2" style="display:none">		
-			       		<td>
-			       			Idade filho 2
-			       		</td>
-			       		<td>
-			       			<input type="text" id="txtIdadeF2" size="2">			
-			       		</td>
-			       </tr>
-			       <tr id="trFilho3" style="display:none">		
-			       		<td>
-			       			Idade filho 3
-			       		</td>
-			       		<td>
-			       			<input type="text" id="txtIdadeF3" size="2">			
-			       		</td>
-			       </tr>
-			       <tr id="trFilho4" style="display:none">		
-			       		<td>
-			       			Idade filho 4
-			       		</td>
-			       		<td>
-			       			<input type="text" id="txtIdadeF4" size="2">			
-			       		</td>
-			       </tr>
-			       <tr id="trFilho5" style="display:none">		
-			       		<td>
-			       			Idade filho 5
-			       		</td>
-			       		<td>
-			       			<input type="text" id="txtIdadeF5" size="2">			
-			       		</td>
-			       </tr>
-			       
+			     	<tr>
+			        	<td>
+			        		Pretende:
+			        	</td>
+			        	<td  colspan="2">
+			        		<select id="cboIntencaoCasal">
+			                				<option value="1">Apenas ajudar</option>
+			                				<option value="2">Apenas ir</option>
+			                				<option value="3">Ajudar e ir</option>
+
+			                			</select>
+			            </td>
+			        </tr>
+			       			       
 			       <tr>
 			       	<td colspan="4" align="center">
 			       		<input type="button" value="Enviar" onclick="salvarCasal()">
 			       	</td>
-			       </tr>
 			       </tbody>
-                </table>  -->     
+                </table>     
                 </div>
               
 

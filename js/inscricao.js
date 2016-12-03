@@ -68,42 +68,6 @@ function verificamenor(){
 	}
 }
 
-function abrirFilhos(){
-	$("#trFilho1").hide('fast');
-	$("#trFilho2").hide('fast');
-	$("#trFilho3").hide('fast');
-	$("#trFilho4").hide('fast');
-	$("#trFilho5").hide('fast');	
-	
-	if(document.getElementById('cboFilhos').value == 1){
-		$("#trFilho1").show('fast');		
-	}else{if(document.getElementById('cboFilhos').value == 2){
-		$("#trFilho1").show('fast');
-		$("#trFilho2").show('fast');
-		}else{if(document.getElementById('cboFilhos').value == 3){
-			$("#trFilho1").show('fast');
-			$("#trFilho2").show('fast');
-			$("#trFilho3").show('fast');
-			}else{if(document.getElementById('cboFilhos').value == 4){
-				$("#trFilho1").show('fast');
-				$("#trFilho2").show('fast');
-				$("#trFilho3").show('fast');
-				$("#trFilho4").show('fast');
-				}else{
-					if(document.getElementById('cboFilhos').value == 5){
-						$("#trFilho1").show('fast');
-						$("#trFilho2").show('fast');
-						$("#trFilho3").show('fast');
-						$("#trFilho4").show('fast');
-						$("#trFilho5").show('fast');
-						}
-					}
-				
-				}
-			
-		}	
-	}
-}
 
 
 function detalhePessoa(det){
@@ -111,5 +75,42 @@ function detalhePessoa(det){
 }
 
 
+
+
+function salvarCasal(){
+
+	if(document.getElementById('hdnIdCasal').value!=''){	
+		dados="";
+		
+		dados = "hdnIdCasal=" + document.getElementById('hdnIdCasal').value;
+		dados += "&txtNomeEsposo=" + document.getElementById('txtNomeEsposo').value;
+		dados += "&txtNomeEsposa=" + document.getElementById('txtNomeEsposa').value;
+		dados += "&cboComunidadeCasal=" + document.getElementById('cboComunidadeCasal').value;
+		dados += "&txtTelFixoCasal=" + document.getElementById('txtTelFixoCasal').value;
+		dados += "&txtTelCelCasal=" + document.getElementById('txtTelCelCasal').value;
+		dados += "&txtEmailCasal=" + document.getElementById('txtEmailCasal').value;
+		dados += "&cboIntencaoCasal=" + document.getElementById('cboIntencaoCasal').value;
+		
+		var varResposta = chamar_ajax('../../php/sql.php', 'filtro=upDateCasal&'+dados, false, 'text', null);
+		if (varResposta==1){
+			alert('Cadastro Efetuado com sucesso!');
+			window.open("http://guarulhosjmj2019.esy.es/", "_self");
+		}
+	}else{	
+		dados += "txtNomeEsposo=" + document.getElementById('txtNomeEsposo').value;
+		dados += "&txtNomeEsposa=" + document.getElementById('txtNomeEsposa').value;
+		dados += "&cboComunidadeCasal=" + document.getElementById('cboComunidadeCasal').value;
+		dados += "&txtTelFixoCasal=" + document.getElementById('txtTelFixoCasal').value;
+		dados += "&txtTelCelCasal=" + document.getElementById('txtTelCelCasal').value;
+		dados += "&txtEmailCasal=" + document.getElementById('txtEmailCasal').value;
+		dados += "&cboIntencaoCasal=" + document.getElementById('cboIntencaoCasal').value;
+		
+			var varResposta = chamar_ajax('../php/sql.php', 'filtro=cadCasal&'+dados, false, 'text', null);
+			if (varResposta==1){
+				alert('Cadastro Efetuado com sucesso!');
+				window.open("http://guarulhosjmj2019.esy.es/", "_self");
+			}
+		}
+}
 
 
