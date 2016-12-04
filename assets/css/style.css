@@ -1,12 +1,3 @@
-/*
- *
- * Template Name: Alissa
- * Template URI: http://azmind.com
- * Description: Alissa - Responsive Coming Soon Template
- * Author: Anli Zaimi
- * Author URI: http://azmind.com
- *
- */
 
 
 body {
@@ -16,6 +7,9 @@ body {
     color: #555;
     font-weight: 400;
     text-align: left;
+}
+textarea{
+	width:701px;
 }
 
 strong { font-weight: 700; }
@@ -290,9 +284,14 @@ img { max-width: 100%; }
 
 /***** Media Queries *****/
 
-@media (min-width: 768px) and (max-width: 991px) {
+
+
+@media (min-width: 768px) and (max-width: 959px) {
+	textarea{
+		width:601px;
+	}
 	
-	.timer .days-wrapper,
+		.timer .days-wrapper,
     .timer .hours-wrapper,
     .timer .minutes-wrapper,
     .timer .seconds-wrapper { width: 140px; height: 140px; margin: 0 7px; }
@@ -304,8 +303,15 @@ img { max-width: 100%; }
 	
 }
 
-@media (max-width: 767px) {
 
+
+
+
+
+@media (min-width: 480px) and (max-width: 767px) {
+	textarea{
+		width:401px;
+	}	
     .logo h1 { text-align: center; }
     .call-us { padding-bottom: 7px; text-align: center; }
 
@@ -325,6 +331,26 @@ img { max-width: 100%; }
 
     .subscribe h3 { font-size: 28px; }
     .subscribe form input.subscribe-email, .subscribe form button { width: 100%; }
-
 }
+
+
+
+
+@media (min-width: 320px) and (max-width: 479px) {
+	textarea{
+		width:251px;
+	}	
+}
+
+
+
+
+
+
+
+@media (max-width: 319px) {
+	textarea{
+		width:251px;
+	}	
+}	
 
