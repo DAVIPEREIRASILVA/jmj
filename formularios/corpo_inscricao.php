@@ -114,15 +114,15 @@ $total1 = mysql_num_rows($dados1);
 			        	</td>
 			        	<td  colspan="4">
 			        		<select id="cboComunidadeCasal">
-			                				<option value="1" <?=($linha1['COMUNIDADE']=='1'?'Selected':'')?>>1&ordf; Comunidade</option>
-			                				<option value="2" <?=($linha1['COMUNIDADE']=='2'?'Selected':'')?> >2&ordf; Comunidade</option>
-			                				<option value="3" <?=($linha1['COMUNIDADE']=='3'?'Selected':'')?>>3&ordf; Comunidade</option>
-			                				<option value="4" <?=($linha1['COMUNIDADE']=='4'?'Selected':'')?>>4&ordf; Comunidade</option>
-			                				<option value="5" <?=($linha1['COMUNIDADE']=='5'?'Selected':'')?>>5&ordf; Comunidade</option>
-			                				<option value="6" <?=($linha1['COMUNIDADE']=='6'?'Selected':'')?>>6&ordf; Comunidade</option>
-			                				<option value="7" <?=($linha1['COMUNIDADE']=='7'?'Selected':'')?>>7&ordf; Comunidade</option>
-			                				<option value="8" <?=($linha1['COMUNIDADE']=='8'?'Selected':'')?>>8&ordf; Comunidade</option>
-			                				<option value="9" <?=($linha1['COMUNIDADE']=='9'?'Selected':'')?>>9&ordf; Comunidade</option>
+			                				<option value="01" <?=($linha1['COMUNIDADE']=='1'?'Selected':'')?>>1&ordf; Comunidade</option>
+			                				<option value="02" <?=($linha1['COMUNIDADE']=='2'?'Selected':'')?> >2&ordf; Comunidade</option>
+			                				<option value="03" <?=($linha1['COMUNIDADE']=='3'?'Selected':'')?>>3&ordf; Comunidade</option>
+			                				<option value="04" <?=($linha1['COMUNIDADE']=='4'?'Selected':'')?>>4&ordf; Comunidade</option>
+			                				<option value="05" <?=($linha1['COMUNIDADE']=='5'?'Selected':'')?>>5&ordf; Comunidade</option>
+			                				<option value="06" <?=($linha1['COMUNIDADE']=='6'?'Selected':'')?>>6&ordf; Comunidade</option>
+			                				<option value="07" <?=($linha1['COMUNIDADE']=='7'?'Selected':'')?>>7&ordf; Comunidade</option>
+			                				<option value="08" <?=($linha1['COMUNIDADE']=='8'?'Selected':'')?>>8&ordf; Comunidade</option>
+			                				<option value="09" <?=($linha1['COMUNIDADE']=='9'?'Selected':'')?>>9&ordf; Comunidade</option>
 			                				<option value="10" <?=($linha1['COMUNIDADE']=='10'?'Selected':'')?>>10&ordf; Comunidade</option>
 			                				<option value="11" <?=($linha1['COMUNIDADE']=='11'?'Selected':'')?>>11&ordf; Comunidade</option>
 			                			</select>
@@ -198,15 +198,15 @@ $total1 = mysql_num_rows($dados1);
 			        	</td>
 			        	<td  colspan="4">
 			        		<select id="cboComunidade">
-			                				<option value="1" <?=($linha['COMUNIDADE']=='1'?'Selected':'')?>>1&ordf; Comunidade</option>
-			                				<option value="2" <?=($linha['COMUNIDADE']=='2'?'Selected':'')?> >2&ordf; Comunidade</option>
-			                				<option value="3" <?=($linha['COMUNIDADE']=='3'?'Selected':'')?>>3&ordf; Comunidade</option>
-			                				<option value="4" <?=($linha['COMUNIDADE']=='4'?'Selected':'')?>>4&ordf; Comunidade</option>
-			                				<option value="5" <?=($linha['COMUNIDADE']=='5'?'Selected':'')?>>5&ordf; Comunidade</option>
-			                				<option value="6" <?=($linha['COMUNIDADE']=='6'?'Selected':'')?>>6&ordf; Comunidade</option>
-			                				<option value="7" <?=($linha['COMUNIDADE']=='7'?'Selected':'')?>>7&ordf; Comunidade</option>
-			                				<option value="8" <?=($linha['COMUNIDADE']=='8'?'Selected':'')?>>8&ordf; Comunidade</option>
-			                				<option value="9" <?=($linha['COMUNIDADE']=='9'?'Selected':'')?>>9&ordf; Comunidade</option>
+			                				<option value="01" <?=($linha['COMUNIDADE']=='1'?'Selected':'')?>>1&ordf; Comunidade</option>
+			                				<option value="02" <?=($linha['COMUNIDADE']=='2'?'Selected':'')?> >2&ordf; Comunidade</option>
+			                				<option value="03" <?=($linha['COMUNIDADE']=='3'?'Selected':'')?>>3&ordf; Comunidade</option>
+			                				<option value="04" <?=($linha['COMUNIDADE']=='4'?'Selected':'')?>>4&ordf; Comunidade</option>
+			                				<option value="05" <?=($linha['COMUNIDADE']=='5'?'Selected':'')?>>5&ordf; Comunidade</option>
+			                				<option value="06" <?=($linha['COMUNIDADE']=='6'?'Selected':'')?>>6&ordf; Comunidade</option>
+			                				<option value="07" <?=($linha['COMUNIDADE']=='7'?'Selected':'')?>>7&ordf; Comunidade</option>
+			                				<option value="08" <?=($linha['COMUNIDADE']=='8'?'Selected':'')?>>8&ordf; Comunidade</option>
+			                				<option value="09" <?=($linha['COMUNIDADE']=='9'?'Selected':'')?>>9&ordf; Comunidade</option>
 			                				<option value="10" <?=($linha['COMUNIDADE']=='10'?'Selected':'')?>>10&ordf; Comunidade</option>
 			                				<option value="11" <?=($linha['COMUNIDADE']=='11'?'Selected':'')?>>11&ordf; Comunidade</option>
 			                			</select>
