@@ -106,14 +106,14 @@ $total1 = mysql_num_rows($dados1);
                 	</tr>
                 	<tr>
                 		<td>Nome da Esposa:</td>
-                		<td colspan="2"><input type="text" id="txtNomeEsposa" size="25" value="<?=$linha1['NOME ESPOSA']?>"></td>
+                		<td colspan="2"><input type="text" id="txtNomeEsposa" size="25" value="<?=$linha1['NOME_ESPOSA']?>"></td>
                 	</tr>
                 	<tr>
 			        	<td>
 			        		Comun:
 			        	</td>
 			        	<td  colspan="4">
-			        		<select id="cboComunidade">
+			        		<select id="cboComunidadeCasal">
 			                				<option value="1" <?=($linha1['COMUNIDADE']=='1'?'Selected':'')?>>1&ordf; Comunidade</option>
 			                				<option value="2" <?=($linha1['COMUNIDADE']=='2'?'Selected':'')?> >2&ordf; Comunidade</option>
 			                				<option value="3" <?=($linha1['COMUNIDADE']=='3'?'Selected':'')?>>3&ordf; Comunidade</option>
