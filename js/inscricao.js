@@ -21,8 +21,7 @@ function salvarPessoa(){
 		var varResposta = chamar_ajax('../../php/sql.php', 'filtro=upDatePessoa&'+dados, false, 'text', null);
 		if (varResposta==1){
 			alert('Cadastro Efetuado com sucesso!');
-			window.open("http://guarulhosjmj2019.esy.es/", "_self");
-		}
+			window.open("http://guarulhosjmj2019.esy.es/adm/formularios/consPessoa.php", "_self");		}
 	}else{	
 		dados = "txtNome=" + document.getElementById('txtNome').value;
 		dados += "&cboSexo=" + document.getElementById('cboSexo').value;
