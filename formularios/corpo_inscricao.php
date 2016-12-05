@@ -26,11 +26,6 @@ $linha1 = mysql_fetch_assoc($dados1);
 $total1 = mysql_num_rows($dados1);
 
 
-
-
-
-
-
 ?>
 
 <!DOCTYPE html>
@@ -42,34 +37,6 @@ $total1 = mysql_num_rows($dados1);
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>JMJ 2019- Panamá</title>
-
-
-		<script src="../js/jquery-1.11.1.min.js" type="text/javascript"></script>
-		<script src="../js/ajax.js" type="text/javascript"></script>
-		<script type="text/javascript" src="../js/jquery.js"></script>
-                
-		<script type="text/javascript" src="../js/inscricao.js"></script>
-
-        <!-- CSS -->
-        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lobster">
-        <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Lato:400,700'>
-        <link rel="stylesheet" href="../assets/font-awesome/css/font-awesome.min.css">
-        <link rel="stylesheet" href="../assets/css/style.css">
-
-        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
-
-        <!-- Favicon and touch icons -->
-        <link rel="shortcut icon" href="assets/ico/favicon.ico">
-        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
-
     </head>
 
     <body>
@@ -79,16 +46,15 @@ $total1 = mysql_num_rows($dados1);
     
     <div>
             <div>
-            <table align="center">
+            <table align="center" border="0">
             	<caption>
-            		<h3>Tipo de cadastro</h3>
+            		<p align="center"><h3>Tipo de cadastro</h3></p>
             	</caption>
             	<tbody>
             		<tr>
-            			<td>
-				            <input type="radio" name="tipoCadastro" value="casal" onclick="exibeFormCasal()"> Casal
-				  			<input type="radio" name="tipoCadastro" value="solteiro" onclick="exibeFormSolteiro()"> Solteiro
-				  		</td>
+            			<td align="right" style="width: 50%;"><input type="radio" style="width: 10%;" name="tipoCadastro" value="casal" onclick="exibeFormCasal()">Casal&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            			
+				        <td align="left" style="width: 50%;"><input type="radio" style="width: 10%;" name="tipoCadastro" value="solteiro" onclick="exibeFormSolteiro()">Solteiro</td>
 				  	</tr>	
 	  			</tbody>
 	  		</table>
@@ -101,12 +67,12 @@ $total1 = mysql_num_rows($dados1);
                 <caption><h3>Formulario de Inscricao- Casal</h3></caption>
                 <tbody>	
                 	<tr>
-                		<td>Nome do Esposo:</td>
-                		<td colspan="2"><input type="text" id="txtNomeEsposo" size="25" value="<?=$linha1['NOME_ESPOSO']?>"></td>
+                		<td style="width: 20%;">Nome do Esposo:</td>
+                		<td colspan="2"><input type="text" id="txtNomeEsposo" value="<?=$linha1['NOME_ESPOSO']?>"></td>
                 	</tr>
                 	<tr>
                 		<td>Nome da Esposa:</td>
-                		<td colspan="2"><input type="text" id="txtNomeEsposa" size="25" value="<?=$linha1['NOME_ESPOSA']?>"></td>
+                		<td colspan="2"><input type="text" id="txtNomeEsposa"  value="<?=$linha1['NOME_ESPOSA']?>"></td>
                 	</tr>
                 	<tr>
 			        	<td>
@@ -133,7 +99,7 @@ $total1 = mysql_num_rows($dados1);
 			                Tel Fixo:
 			            </td>
 			            <td colspan="2">    
-			                <input type="text" id="txtTelFixoCasal" size="25" value="<?=$linha1['TEL_FIXO']?>">
+			                <input type="text" id="txtTelFixoCasal" value="<?=$linha1['TEL_FIXO']?>">
 			            </td>
 			       </tr>
 			        <tr>
@@ -141,7 +107,7 @@ $total1 = mysql_num_rows($dados1);
 			                Celular:
 			            </td>
 			            <td colspan="2">    
-			                <input type="text" id="txtTelCelCasal"  size="25" value="<?=$linha1['CELULAR']?>">
+			                <input type="text" id="txtTelCelCasal"  value="<?=$linha1['CELULAR']?>">
 			            </td>
 			       </tr>
 			        <tr>
@@ -149,7 +115,7 @@ $total1 = mysql_num_rows($dados1);
 			                Email:
 			            </td>
 			            <td colspan="2">    
-			                <input type="text" id="txtEmailCasal" size="25"  value="<?=$linha1['EMAIL']?>">
+			                <input type="text" id="txtEmailCasal"  value="<?=$linha1['EMAIL']?>">
 			            </td>
 			       </tr>
 			       </tr>
