@@ -58,20 +58,35 @@ $total = mysql_num_rows($dados);
 
  				<div id="divPessoas">
  					<div>
- 						<p align="center"><h2>Jovens cadastrados: <?php echo $total;?></h2></p>
  						<table border="1" align="left">
+ 						<caption><h3>Jovens Cadastrados: <?php echo $total;?></h3></caption>
  							<thead>
  								<tr bgcolor="#708090" style="color:#ffffff;">
- 									<td style="vertical-align: middle;" align="center" color="#ffffff">
+ 									<td style="vertical-align: middle;" align="center">
  										Com
  									</td>
- 									<td style="vertical-align: middle;" align="center" color="#ffffff">
+ 									<td style="vertical-align: middle;" align="center">
  										Nome
  									</td>
- 									<td style="vertical-align: middle;" align="center" >
- 										T Celular
+ 									<td style="vertical-align: middle;" align="center" class="oculta_td">
+ 										Nascimento
  									</td>
- 									<td style="vertical-align: middle;" align="center" >
+ 									<td style="vertical-align: middle;" align="center" class="oculta_td" >
+ 										Celular
+ 									</td>
+ 									<td style="vertical-align: middle;" align="center" class="oculta_td" >
+ 										T Fixo
+ 									</td>
+ 									<td style="vertical-align: middle;" align="center" class="oculta_td" >
+ 										E_mail
+ 									</td>
+ 									<td style="vertical-align: middle;" align="center" class="oculta_td" >
+ 										Nome_Resp
+ 									</td>
+ 									<td style="vertical-align: middle;" align="center" class="oculta_td" >
+ 										Cel_Resp
+ 									</td>
+ 									<td style="vertical-align: middle;" align="center">
  										Detalhes
  									</td>
  								</tr>
@@ -85,7 +100,13 @@ $total = mysql_num_rows($dados);
 ?>
 <tr><td><?=$linha['COMUNIDADE']?></td>
 <td><?=$linha['NOME']?></td>
+<td><?=$linha['NASC']?></td>
 <td><?=$linha['CELULAR']?></td>
+<td><?=$linha['TEL_FIXO']?></td>
+<td><?=$linha['EMAIL']?></td>
+<td><?=$linha['NOME_RESP']?></td>
+<td><?=$linha['CEL_RESP']?></td>
+
 <td style="vertical-align: middle;" align="center"><a href="#" onclick="detalhePessoa('<?=$linha['ID_PESSOA']?>')"><img src="../images/cadastro.png"></a></td></tr>
 <?php
 		// finaliza o loop que vai mostrar os dados
