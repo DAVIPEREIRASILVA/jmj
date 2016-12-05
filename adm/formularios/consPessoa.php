@@ -100,12 +100,12 @@ $total = mysql_num_rows($dados);
 ?>
 <tr><td><?=$linha['COMUNIDADE']?></td>
 <td><?=$linha['NOME']?></td>
-<td><?=$linha['NASC']?></td>
-<td><?=$linha['CELULAR']?></td>
-<td><?=$linha['TEL_FIXO']?></td>
-<td><?=$linha['EMAIL']?></td>
-<td><?=$linha['NOME_RESP']?></td>
-<td><?=$linha['CEL_RESP']?></td>
+<td class="oculta_td"><?=$linha['NASC']?></td>
+<td class="oculta_td"><?=$linha['CELULAR']?></td>
+<td class="oculta_td"><?=$linha['TEL_FIXO']?></td>
+<td class="oculta_td"><?=$linha['EMAIL']?></td>
+<td class="oculta_td"><?=$linha['NOME_RESP']?></td>
+<td class="oculta_td"><?=$linha['CEL_RESP']?></td>
 
 <td style="vertical-align: middle;" align="center"><a href="#" onclick="detalhePessoa('<?=$linha['ID_PESSOA']?>')"><img src="../images/cadastro.png"></a></td></tr>
 <?php

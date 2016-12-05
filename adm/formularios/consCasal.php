@@ -99,11 +99,11 @@ $total = mysql_num_rows($dados);
 ?>
 <tr><td><?=$linha['COMUNIDADE']?></td>
 <td><?=$linha['NOME_ESPOSO']?></td>
-<td><?=$linha['NOME_ESPOSA']?></td>
-<td><?=$linha['TEL_FIXO']?></td>
-<td><?=$linha['CELULAR']?></td>
-<td><?=$linha['EMAIL']?></td>
-<td><?=$linha['INTENCAO']?></td>
+<td class="oculta_td"><?=$linha['NOME_ESPOSA']?></td>
+<td class="oculta_td"><?=$linha['TEL_FIXO']?></td>
+<td class="oculta_td"><?=$linha['CELULAR']?></td>
+<td class="oculta_td"><?=$linha['EMAIL']?></td>
+<td class="oculta_td"><?=$linha['INTENCAO']?></td>
 <td style="vertical-align: middle;" align="center"><a href="#" onclick="detalheCasal('<?=$linha['ID_CASAL']?>')"><img src="../images/cadastro.png"></a></td></tr>
 <?php
 		// finaliza o loop que vai mostrar os dados
