@@ -1,5 +1,5 @@
 <?php
-
+/*
 include '../../php/conexao_mysql.php';
 
 // cria a instruÁ„o SQL que vai selecionar os dados da query1
@@ -10,26 +10,43 @@ $dados = mysql_query($query, $con) or die(mysql_error());
 $linha = mysql_fetch_assoc($dados);
 // calcula quantos dados retornaram
 $total = mysql_num_rows($dados);
-
+*/
 ?>
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
     <head>
 
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>JMJ 2019- Panam√°</title>
+	<link rel="shortcut icon" type="image/ico" href="http://www.datatables.net/favicon.ico">
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=2.0">
+	<title>DataTables example - Zero configuration</title>
+	<link rel="stylesheet" type="text/css" href="../../DataTables-master/media/css/jquery.dataTables.css">
+	<link rel="stylesheet" type="text/css" href="../../DataTables-master/examples/resources/syntax/shCore.css">
+	<link rel="stylesheet" type="text/css" href="../../DataTables-master/examples/resources/demo.css">
+	<style type="text/css" class="init">
+	
+	</style>
+	<script type="text/javascript" language="javascript" src="//code.jquery.com/jquery-1.12.3.js">
+	</script>
+	<script type="text/javascript" language="javascript" src="../../DataTables-master/media/js/jquery.dataTables.js">
+	</script>
+	<script type="text/javascript" language="javascript" src="../../DataTables-master/examples/resources/syntax/shCore.js">
+	</script>
+	<script type="text/javascript" language="javascript" src="../../DataTables-master/examples/resources/demo.js">
+	</script>    
+	<script type="text/javascript" language="javascript" class="init">
+	
+
+$(document).ready(function() {
+	$('#tabCasal').DataTable();
+} );
 
 
-		<script src="../../js/jquery-1.11.1.min.js" type="text/javascript"></script>
-		<script src="../../js/ajax.js" type="text/javascript"></script>
-		<script type="text/javascript" src="../../js/jquery.js"></script>
-                
-		<script type="text/javascript" src="../../js/inscricao.js"></script>
+	</script>    
+    
+
 
         <!-- CSS -->
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lobster">
@@ -54,13 +71,13 @@ $total = mysql_num_rows($dados);
     </head>
 
     <body>
- <?php include '../header.php' ?>
+ <?php /* include '../header.php' */?>
         <!-- Content -->
 
  				<div id="divPessoas">
  					<div>
  						<?php echo $total;?>
- 						<table border="1" align="center">
+ 						<table border="1" align="center" id="tabCasal">
  						<caption><h3>Casais Cadastrados: <?php echo $total;?></h3></caption>
  							<thead>
  								<tr bgcolor="#708090" style="color:#ffffff;">
@@ -113,16 +130,11 @@ $total = mysql_num_rows($dados);
 ?>
 					             </tbody>
  						</table>
+					
 					</div>     	 
 				</div>
 
-        
-        <!-- Javascript -->
-        <script src="../../assets/js/jquery-1.11.1.min.js"></script>
-        <script src="../../assets/bootstrap/js/bootstrap.min.js"></script>
-        <script src="../../assets/js/jquery.backstretch.min.js"></script>
-        <script src="../../assets/js/jquery.countdown.min.js"></script>
-        <script src="../../assets/js/scripts.js"></script>
+
         
         <!--[if lt IE 10]>
             <script src="assets/js/placeholder.js"></script>
