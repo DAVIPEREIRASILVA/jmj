@@ -154,15 +154,15 @@ $total1 = mysql_num_rows($dados1);
                 <caption><h3>Formulario de Inscricao- Solteiro</h3></caption>
                 
                 	<tr>
-                		<td>Nome:</td>
-                		<td colspan="4"><input type="text" id="txtNome" size="31" value="<?=$linha['NOME']?>"></td>
+                		<td style="width: 10%;">Nome:</td>
+                		<td colspan="3"><input type="text" id="txtNome" value="<?=$linha['NOME']?>"></td>
                 	</tr>
 
 			        <tr>
 			        	<td>
 			        		Comun:
 			        	</td>
-			        	<td  colspan="4">
+			        	<td  colspan="3">
 			        		<select id="cboComunidade">
 			                				<option value="01" <?=($linha['COMUNIDADE']=='1'?'Selected':'')?>>1&ordf; Comunidade</option>
 			                				<option value="02" <?=($linha['COMUNIDADE']=='2'?'Selected':'')?> >2&ordf; Comunidade</option>
@@ -182,24 +182,24 @@ $total1 = mysql_num_rows($dados1);
 			            <td>   
 			                Tel Fixo:
 			            </td>
-			            <td colspan="4">    
-			                <input type="text" id="txtTelFixo" size="31" value="<?=$linha['TEL_FIXO']?>">
+			            <td colspan="3">    
+			                <input type="text" id="txtTelFixo" value="<?=$linha['TEL_FIXO']?>">
 			            </td>
 			       </tr>
 			        <tr>
 			            <td >   
 			                Celular:
 			            </td>
-			            <td colspan="4">    
-			                <input type="text" id="txtTelCel"  size="31" value="<?=$linha['CELULAR']?>">
+			            <td colspan="3">    
+			                <input type="text" id="txtTelCel" value="<?=$linha['CELULAR']?>">
 			            </td>
 			       </tr>
 			        <tr>
 			            <td>   
 			                Email:
 			            </td>
-			            <td colspan="4">    
-			                <input type="text" id="txtEmail" size="31" value="<?=$linha['EMAIL']?>">
+			            <td colspan="3">    
+			                <input type="text" id="txtEmail" value="<?=$linha['EMAIL']?>">
 			            </td>
 			       </tr>
                 	<tr>
@@ -207,31 +207,33 @@ $total1 = mysql_num_rows($dados1);
 			                Sexo:
 			            </td>
 			            <td><select id="cboSexo">
-			                				<option value="Masculino">Masc</option>
-			                				<option value="Feminino">Femi</option>
+			                				<option value="Masculino">Masculino</option>
+			                				<option value="Feminino">Feminino</option>
 			                </select>
 			            </td>
+			        </tr>
+			        <tr>    
 			            <td >    
 			                Nasc:
 			            </td>
 			            <td>
-			            	<input type="date" size="21" id="txtDtNasc" name="txtDtNasc" placeholder="00/00/0000" onblur="verificamenor()" value="<?=$linha['NASC']?>">
+			            	<input type="date" id="txtDtNasc" name="txtDtNasc" placeholder="00/00/0000" onblur="verificamenor()" value="<?=$linha['NASC']?>">
 			            </td>
 			        </tr>
 			        
 			        <tr <?=($linha['NOME_RESP']!=''?'':'style="display:none"')?> id="trDadosResponsavel">
-			        	<td align="center" colspan="5"><br/>
+			        	<td align="center" colspan="4"><br/>
 			        		<b>Dados do Responsavel</b>
 			        	<td>
 			        </tr>
 			        
 			        <tr <?=($linha['NOME_RESP']!=''?'':'style="display:none"')?> id="trNomeResponsavel">
                 		<td>Nome Resp:</td>
-                		<td colspan="4"><input type="text" id="txtNomeResponsavel" size="31" value="<?=$linha['NOME_RESP']?>"></td>
+                		<td colspan="3"><input type="text" id="txtNomeResponsavel" value="<?=$linha['NOME_RESP']?>"></td>
                 	</tr>
 			        <tr <?=($linha['NOME_RESP']!=''?'':'style="display:none"')?>	id="trCelResponsavel">
                 		<td>Cel Resp:</td>
-                		<td colspan="4"><input type="text" id="txtCelResponsavel" size="31" value="<?=$linha['CEL_RESP']?>"></td>
+                		<td colspan="3"><input type="text" id="txtCelResponsavel" value="<?=$linha['CEL_RESP']?>"></td>
                 	</tr>
                 	
 			       <tr>
