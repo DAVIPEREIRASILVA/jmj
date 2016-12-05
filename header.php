@@ -19,12 +19,6 @@
                     <span><a href="#" onclick="alert('Pagina em desenvolvimento')">Testemunhos | </a></span>
                     <span><a href="#" onclick="alert('Pagina em desenvolvimento')">Fotos | </a></span>
                     <span><a href="http://guarulhosjmj2019.esy.es/formularios/inscricao.php">Participe</a></span><br/>
-                    
-                    
-                    
-                    
-                    
-
                 </div>
             </div>
         </div>
