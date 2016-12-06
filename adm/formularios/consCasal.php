@@ -1,5 +1,5 @@
 <?php
-
+/*
 include '../../php/conexao_mysql.php';
 
 // cria a instrução SQL que vai selecionar os dados da query1
@@ -10,7 +10,7 @@ $dados = mysql_query($query, $con) or die(mysql_error());
 $linha = mysql_fetch_assoc($dados);
 // calcula quantos dados retornaram
 $total = mysql_num_rows($dados);
-
+*/
 ?>
 
 
@@ -71,7 +71,7 @@ $(document).ready(function() {
     </head>
 
     <body>
- <?php  include '../header.php' ?>
+ <?php /* include '../header.php' */?>
         <!-- Content -->
 
  				<div id="divPessoas">
