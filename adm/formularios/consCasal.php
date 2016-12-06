@@ -59,7 +59,7 @@ $total = mysql_num_rows($dados);
 
  				<div id="divPessoas">
  					<div>
- 						<?php echo $total;?>
+
  						<table border="1" align="center">
  						<caption><h3>Casais Cadastrados: <?php echo $total;?></h3></caption>
  							<thead>
