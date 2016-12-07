@@ -1,13 +1,16 @@
 
-
 body {
-    background: #f8f8f8 url(../img/pattern.jpg);
+    background: #D8D8D8 url(../img/pattern.jpg);
     border-top: 2px solid #e75967;
     font-family: 'Lato', sans-serif;
     color: #555;
     font-weight: 400;
     text-align: left;
 }
+
+
+
+
 table{
 	width:701px;
 }
@@ -295,8 +298,14 @@ img { max-width: 100%; }
 
 
 
-@media (min-width: 768px) and (max-width: 959px) {
 
+
+
+@media (min-width: 768px) and (max-width: 1500px) {
+.mostra_td{
+	display:none ;
+}	
+	
 
 	table{
 		width:601px;
@@ -320,9 +329,9 @@ img { max-width: 100%; }
 
 
 @media (min-width: 480px) and (max-width: 767px) {
-.oculta_td{
+.mostra_td{
 	display:none ;
-}
+}	
 	
 	table{
 		width:401px;
@@ -352,18 +361,27 @@ img { max-width: 100%; }
 .oculta_td{
 	display:none ;
 }	
+
+
 	table{
 		width:251px;
-	}	
+	}
+	.logo h1 { text-align: center; }
+    .call-us { padding-bottom: 7px; text-align: center; }	
 }
 
 @media (max-width: 319px) {
 .oculta_td{
 	display:none ;
 }
+.mostra_td{
+	display:block ;
+}
 	
 	table{
 		width:251px;
-	}	
+	}
+	.logo h1 { text-align: center; }
+    .call-us { padding-bottom: 7px; text-align: center; }		
 }	
 
