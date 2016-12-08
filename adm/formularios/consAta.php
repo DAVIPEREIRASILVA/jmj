@@ -87,8 +87,8 @@ $total = mysql_num_rows($dados);
 		do {
 ?>
 <tr><td><?=$linha['DATA']?></td>
-<td><?=$linha['LOCAL']?></td>
-<td class="PARTICIPANTES"><?=$linha['NOME_ESPOSA']?></td>
+<td  class="oculta_td"><?=$linha['LOCAL']?></td>
+<td  class="oculta_td"><?=$linha['PARTICIPANTES']?></td>
 <td style="vertical-align: middle;" align="center"><a href="#" onclick="detalheAta('<?=$linha['ID_ATA']?>')"><img src="../images/cadastro.png"></a></td></tr>
 <?php
 		// finaliza o loop que vai mostrar os dados
