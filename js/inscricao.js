@@ -81,7 +81,9 @@ function detalheAta(det){
 	window.open("cadAta.php?idAta="+det,"_self");
 }
 
-
+function novaAta(det){
+	window.open("cadAta.php","_self");
+}
 
 
 

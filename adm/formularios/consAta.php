@@ -98,7 +98,7 @@ $total = mysql_num_rows($dados);
 ?>
                 				       <tr>
 			       	<td colspan="4" align="center">
-			       		<input type="button" value="Enviar" onclick="salvarAta()">
+			       		<input type="button" value="Cadastrar nova Ata" onclick="novaAta()">
 			       	</td>
 			       </tr>
 					             </tbody>
