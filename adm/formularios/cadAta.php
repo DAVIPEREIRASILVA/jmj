@@ -80,7 +80,7 @@ $total = mysql_num_rows($dados);
                 	<tr>
                 		<td colspan="3">
                 		Participantes:<br/>
-                		<textarea style="height:75px;" id="txtParticipantes"> <?=$linha['PARTICIPANTES']?></textarea>
+                		<textarea style="height:75px;" id="txtParticipantes"><?=$linha['PARTICIPANTES']?></textarea>
                 	</tr>
                 	<tr>
                 		<td colspan="3">
