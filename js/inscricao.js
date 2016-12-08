@@ -134,7 +134,7 @@ function salvarAta(){
 			window.open("http://guarulhosjmj2019.esy.es/", "_self");
 		}
 	}else{	
-		dados += "txtData=" + document.getElementById('txtData').value;
+		dados = "txtData=" + document.getElementById('txtData').value;
 		dados += "&txtLocal=" + document.getElementById('txtLocal').value;
 		dados += "&txtParticipantes=" + document.getElementById('txtParticipantes').value;
 		dados += "&txtPauta=" + document.getElementById('txtPauta').value;
