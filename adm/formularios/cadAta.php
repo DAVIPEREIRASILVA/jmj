@@ -19,7 +19,7 @@ $total = mysql_num_rows($dados);
 
 <!DOCTYPE html>
 <html lang="en">
-
+<?php echo $query; ?>
     <head>
 
         <meta charset="utf-8">
