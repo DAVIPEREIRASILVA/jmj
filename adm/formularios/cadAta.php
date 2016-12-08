@@ -15,7 +15,7 @@
 		<script src="../../js/ajax.js" type="text/javascript"></script>
 		<script type="text/javascript" src="../../js/jquery.js"></script>
                 
-<script type="text/javascript" src="../js/cadastro_pautas.js"></script>
+<script type="text/javascript" src="../../js/inscricao.js"></script>
 
         <!-- CSS -->
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lobster">
@@ -45,8 +45,8 @@
     
     <div>
       <div>
-	    <input type="hidden" id="hdnIdPauta">
-           <table border="1" cellspacing="0" cellpadding="2" align="center">
+	    <input type="hidden" id="hdnIdAta">
+           <table border="0" cellspacing="0" cellpadding="2" align="center">
                 <caption><h3>Cadastro de Atas</h3></caption>
                 <tbody>	
                 	<tr>
@@ -64,23 +64,28 @@
                 	<tr>
                 		<td colspan="3">
                 		Participantes:<br/>
-                		<textarea style="height:75px;"></textarea>
+                		<textarea style="height:75px;" id="txtParticipantes"></textarea>
                 	</tr>
                 	<tr>
                 		<td colspan="3">
                 		Pauta:<br/>
-                		<textarea rows="" cols="1"style="height:75px;"></textarea>
+                		<textarea rows="" cols="1"style="height:75px;" id="txtPauta"></textarea>
                 	</tr>
                 	<tr>
                 		<td colspan="3">
                 		Discu&ccedil;&otilde;es:<br/>
-                		<textarea style="height:175px;"></textarea>
+                		<textarea style="height:175px;" id="txtDiscusoes"></textarea>
                 	</tr>
                 	<tr>
                 		<td colspan="3">
                 		Encaminhamentos:<br/>
-                		<textarea style="height:175px;"></textarea>
+                		<textarea style="height:175px;" id="txtEncaminhamentos"></textarea>
                 	</tr>
+                				       <tr>
+			       	<td colspan="4" align="center">
+			       		<input type="button" value="Enviar" onclick="salvarAta()">
+			       	</td>
+			       </tr>
 
 			       </tbody>
                 </table>     

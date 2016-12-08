@@ -115,4 +115,37 @@ function salvarCasal(){
 		}
 }
 
+function salvarAta(){
+
+	if(document.getElementById('hdnIdAta').value!=''){	
+		dados="";
+		
+		dados = "hdnIdAta=" + document.getElementById('hdnIdAta').value;
+		dados += "&txtData=" + document.getElementById('txtData').value;
+		dados += "&txtLocal=" + document.getElementById('txtLocal').value;
+		dados += "&txtParticipantes=" + document.getElementById('txtParticipantes').value;
+		dados += "&txtPauta=" + document.getElementById('txtPauta').value;
+		dados += "&txtDiscusoes=" + document.getElementById('txtDiscusoes').value;
+		dados += "&txtEncaminhamentos=" + document.getElementById('txtEncaminhamentos').value;
+		
+		var varResposta = chamar_ajax('../../php/sql.php', 'filtro=upDateAta&'+dados, false, 'text', null);
+		if (varResposta==1){
+			alert('Cadastro Efetuado com sucesso!');
+			window.open("http://guarulhosjmj2019.esy.es/", "_self");
+		}
+	}else{	
+		dados += "txtData=" + document.getElementById('txtData').value;
+		dados += "&txtLocal=" + document.getElementById('txtLocal').value;
+		dados += "&txtParticipantes=" + document.getElementById('txtParticipantes').value;
+		dados += "&txtPauta=" + document.getElementById('txtPauta').value;
+		dados += "&txtDiscusoes=" + document.getElementById('txtDiscusoes').value;
+		dados += "&txtEncaminhamentos=" + document.getElementById('txtEncaminhamentos').value;
+		
+			var varResposta = chamar_ajax('../php/sql.php', 'filtro=cadAta&'+dados, false, 'text', null);
+			if (varResposta==1){
+				alert('Cadastro Efetuado com sucesso!');
+				window.open("http://guarulhosjmj2019.esy.es/", "_self");
+			}
+		}
+}
 
