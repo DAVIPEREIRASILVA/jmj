@@ -1,7 +1,5 @@
 <?php
 
-
-
 // cria a instrução SQL que vai selecionar os dados da query1
 $idPessoa = $_GET['idPessoa'];
 $idCasal = $_GET['idCasal'];

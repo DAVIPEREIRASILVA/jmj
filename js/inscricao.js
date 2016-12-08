@@ -77,6 +77,12 @@ function detalheCasal(det){
 	window.open("detPessoa.php?idCasal="+det,"_self");
 }
 
+function detalheAta(det){
+	window.open("cadAta.php?idAta="+det,"_self");
+}
+
+
+
 
 
 function salvarCasal(){
