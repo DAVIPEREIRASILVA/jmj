@@ -141,7 +141,7 @@ function salvarAta(){
 		dados += "&txtDiscusoes=" + document.getElementById('txtDiscusoes').value;
 		dados += "&txtEncaminhamentos=" + document.getElementById('txtEncaminhamentos').value;
 		
-			var varResposta = chamar_ajax('../php/sql.php', 'filtro=cadAta&'+dados, false, 'text', null);
+			var varResposta = chamar_ajax('../../php/sql.php', 'filtro=cadAta&'+dados, false, 'text', null);
 			if (varResposta==1){
 				alert('Cadastro Efetuado com sucesso!');
 				window.open("http://guarulhosjmj2019.esy.es/", "_self");
