@@ -80,22 +80,22 @@ $total = mysql_num_rows($dados);
                 	<tr>
                 		<td colspan="3">
                 		Participantes:<br/>
-                		<textarea style="height:75px;" id="txtParticipantes" value="<?=$linha['PARTICIPANTES']?>"></textarea>
+                		<textarea style="height:75px;" id="txtParticipantes"> <?=$linha['PARTICIPANTES']?></textarea>
                 	</tr>
                 	<tr>
                 		<td colspan="3">
                 		Pauta:<br/>
-                		<textarea rows="" cols="1"style="height:75px;" id="txtPauta" value="<?=$linha['PAUTA']?>"></textarea>
+                		<textarea rows="" cols="1"style="height:75px;" id="txtPauta" ><?=$linha['PAUTA']?></textarea>
                 	</tr>
                 	<tr>
                 		<td colspan="3">
                 		Discu&ccedil;&otilde;es:<br/>
-                		<textarea style="height:175px;" id="txtDiscusoes" value="<?=$linha['DISCUSOES']?>"></textarea>
+                		<textarea style="height:175px;" id="txtDiscusoes"><?=$linha['DISCUSOES']?></textarea>
                 	</tr>
                 	<tr>
                 		<td colspan="3">
                 		Encaminhamentos:<br/>
-                		<textarea style="height:175px;" id="txtEncaminhamentos" value="<?=$linha['ENCAMINHAMENTOS']?>"></textarea>
+                		<textarea style="height:175px;" id="txtEncaminhamentos" ><?=$linha['ENCAMINHAMENTOS']?></textarea>
                 	</tr>
                 				       <tr>
 			       	<td colspan="4" align="center">
