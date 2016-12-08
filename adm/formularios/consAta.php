@@ -72,6 +72,10 @@ $total = mysql_num_rows($dados);
  									</td>
  									<td style="vertical-align: middle;" align="center" color="#ffffff" class="oculta_td" >
  										Participantes
+ 									<td style="vertical-align: middle;" align="center" color="#ffffff">
+ 										Detalhes
+ 									</td>
+ 
  									</td>
  								</tr>
  							</thead>
