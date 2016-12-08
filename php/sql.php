@@ -91,18 +91,15 @@ function cadAta(){
 
 function upDateAta(){
 
-	$hdnIdPessoa = $_POST['hdnIdPessoa'];   // Recendo o que foi digitado no campo nome do formulário.
-	$txtnome = $_POST['txtNome'];   // Recendo o que foi digitado no campo nome do formulário.
-	$cboSexo= $_POST['cboSexo'];   // Recendo o que foi digitado no campo nome do formulário.
-	$txtDtNasc= $_POST['txtDtNasc'];   // Recendo o que foi digitado no campo nome do formulário.
-	$cboComunidade= $_POST['cboComunidade'];   // Recendo o que foi digitado no campo nome do formulário.
-	$txtTelFixo= $_POST['txtTelFixo'];   // Recendo o que foi digitado no campo nome do formulário.
-	$txtTelCel= $_POST['txtTelCel'];   // Recendo o que foi digitado no campo nome do formulário.
-	$txtEmail= $_POST['txtEmail'];   // Recendo o que foi digitado no campo nome do formulário.
-	$txtNomeResponsavel= $_POST['txtNomeResponsavel'];   // Recendo o que foi digitado no campo nome do formulário.
-	$txtCelResponsavel= $_POST['txtCelResponsavel'];   // Recendo o que foi digitado no campo nome do formulário.
-
-	$result = mysql_query("UPDATE PESSOA SET NOME='$txtnome', SEXO='$cboSexo', NASC='$txtDtNasc', COMUNIDADE='$cboComunidade', TEL_FIXO='$txtTelFixo', CELULAR='$txtTelCel', EMAIL='$txtEmail', NOME_RESP='$txtNomeResponsavel', CEL_RESP='$txtCelResponsavel' WHERE ID_PESSOA=$hdnIdPessoa");
+	$hdnIdAta = $_POST['hdnIdAta'];   // Recendo o que foi digitado no campo nome do formulário.
+	$txtData = $_POST['txtData'];   // Recendo o que foi digitado no campo nome do formulário.
+	$txtLocal = $_POST['txtLocal'];   // Recendo o que foi digitado no campo nome do formulário.
+	$txtParticipantes = $_POST['txtParticipantes'];   // Recendo o que foi digitado no campo nome do formulário.
+	$txtPauta = $_POST['txtPauta'];   // Recendo o que foi digitado no campo nome do formulário.
+	$txtDiscusoes = $_POST['txtDiscusoes'];   // Recendo o que foi digitado no campo nome do formulário.
+	$txtEncaminhamentos = $_POST['txtEncaminhamentos'];   // Recendo o que foi digitado no campo nome do formulário.
+	
+	$result = mysql_query("UPDATE ATA SET DATA='$txtData', LOCAL='$txtLocal', PARTICIPANTES='$txtParticipantes', PAUTA='$txtPauta', DISCUSOES='$txtDiscusoes', ENCAMINHAMENTOS='$txtEncaminhamentos' WHERE ID_ATA=$hdnIdAta");
 	if ($result != 1) {
 		die('Invalid query: ' . mysql_error());
 	}else{ echo $result;}

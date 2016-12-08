@@ -62,41 +62,41 @@ $total = mysql_num_rows($dados);
     
     <div>
       <div>
-	    <input type="hidden" id="hdnIdAta" value="<?=$linha1['ID_ATA']?>">
+	    <input type="hidden" id="hdnIdAta" value="<?=$linha['ID_ATA']?>">
            <table border="0" cellspacing="0" cellpadding="2" align="center">
                 <caption><h3>Cadastro de Atas</h3></caption>
                 <tbody>	
                 	<tr>
                 		<td>Data:</td>
-                		<td colspan="2"><input type="date" id="txtData" size="25" value="<?=$linha1['DATA']?>"></td>
+                		<td colspan="2"><input type="date" id="txtData" size="25" value="<?=$linha['DATA']?>"></td>
                 	</tr>
 			        <tr>
 			            <td>   
 			                Local:
 			            </td>
 			            <td colspan="2">    
-			                <input type="text" id="txtLocal" size="25" value="<?=$linha1['LOCAL']?>">
+			                <input type="text" id="txtLocal" size="25" value="<?=$linha['LOCAL']?>">
 			            </td>
 			       </tr>
                 	<tr>
                 		<td colspan="3">
                 		Participantes:<br/>
-                		<textarea style="height:75px;" id="txtParticipantes" value="<?=$linha1['PARTICIPANTES']?>"></textarea>
+                		<textarea style="height:75px;" id="txtParticipantes" value="<?=$linha['PARTICIPANTES']?>"></textarea>
                 	</tr>
                 	<tr>
                 		<td colspan="3">
                 		Pauta:<br/>
-                		<textarea rows="" cols="1"style="height:75px;" id="txtPauta" value="<?=$linha1['PAUTA']?>"></textarea>
+                		<textarea rows="" cols="1"style="height:75px;" id="txtPauta" value="<?=$linha['PAUTA']?>"></textarea>
                 	</tr>
                 	<tr>
                 		<td colspan="3">
                 		Discu&ccedil;&otilde;es:<br/>
-                		<textarea style="height:175px;" id="txtDiscusoes" value="<?=$linha1['DISCUSOES']?>"></textarea>
+                		<textarea style="height:175px;" id="txtDiscusoes" value="<?=$linha['DISCUSOES']?>"></textarea>
                 	</tr>
                 	<tr>
                 		<td colspan="3">
                 		Encaminhamentos:<br/>
-                		<textarea style="height:175px;" id="txtEncaminhamentos" value="<?=$linha1['ENCAMINHAMENTOS']?>"></textarea>
+                		<textarea style="height:175px;" id="txtEncaminhamentos" value="<?=$linha['ENCAMINHAMENTOS']?>"></textarea>
                 	</tr>
                 				       <tr>
 			       	<td colspan="4" align="center">

@@ -96,6 +96,11 @@ $total = mysql_num_rows($dados);
 	// fim do if 
 	}
 ?>
+                				       <tr>
+			       	<td colspan="4" align="center">
+			       		<input type="button" value="Enviar" onclick="salvarAta()">
+			       	</td>
+			       </tr>
 					             </tbody>
  						</table>
 					</div>     	 
