@@ -12,6 +12,7 @@ function salvarPessoa(){
 		dados += "&cboSexo=" + document.getElementById('cboSexo').value;
 		dados += "&txtDtNasc=" + document.getElementById('txtDtNasc').value;
 		dados += "&cboComunidade=" + document.getElementById('cboComunidade').value;
+		dados += "&cboGrupo=" + document.getElementById('cboGrupo').value;
 		dados += "&txtTelFixo=" + document.getElementById('txtTelFixo').value;
 		dados += "&txtTelCel=" + document.getElementById('txtTelCel').value;
 		dados += "&txtEmail=" + document.getElementById('txtEmail').value;
@@ -27,6 +28,7 @@ function salvarPessoa(){
 		dados += "&cboSexo=" + document.getElementById('cboSexo').value;
 		dados += "&txtDtNasc=" + document.getElementById('txtDtNasc').value;
 		dados += "&cboComunidade=" + document.getElementById('cboComunidade').value;
+		dados += "&cboGrupo=" + document.getElementById('cboGrupo').value;
 		dados += "&txtTelFixo=" + document.getElementById('txtTelFixo').value;
 		dados += "&txtTelCel=" + document.getElementById('txtTelCel').value;
 		dados += "&txtEmail=" + document.getElementById('txtEmail').value;

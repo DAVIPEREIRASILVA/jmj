@@ -176,6 +176,23 @@ $total1 = mysql_num_rows($dados1);
 			                			</select>
 			            </td>
 			        </tr>
+			        
+			        <tr>
+			        	<td>
+			        		Grupo:
+			        	</td>
+			        	<td  colspan="3">
+			        		<select id="cboGrupo">
+			                				<option value="1" <?=($linha['ID_GRUPO']=='1'?'Selected':'')?>>Grupo 1</option>
+			                				<option value="2" <?=($linha['ID_GRUPO']=='2'?'Selected':'')?>>Grupo 2</option>
+			                				<option value="3" <?=($linha['ID_GRUPO']=='3'?'Selected':'')?>>Grupo 3</option>
+			                				<option value="4" <?=($linha['ID_GRUPO']=='4'?'Selected':'')?>>Grupo 4</option>
+			               </select>
+			            </td>
+			        </tr>			        
+			        
+			        
+			        
 			        <tr>
 			            <td>   
 			                Tel Fixo:
