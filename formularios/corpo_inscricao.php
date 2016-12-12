@@ -150,7 +150,18 @@ $total1 = mysql_num_rows($dados1);
             <input type="hidden" id="hdnIdPessoa" value="<?=$linha['ID_PESSOA']?>">
                 <table border="0" cellspacing="0" cellpadding="2" align="center">
                 <caption><h3>Formulario de Inscricao- Solteiro</h3></caption>
-                
+			        <tr>
+			        	<td>
+			        		Status:
+			        	</td>
+			        	<td  colspan="3">
+			        		<select id="cboStatus">
+			                				<option></option>
+			                				<option value="1" <?=($linha['ID_STATUS']=='1'?'Selected':'')?>>Ativo</option>
+			                				<option value="2" <?=($linha['ID_STATUS']=='2'?'Selected':'')?>>Inativo</option>
+			                </select>
+			            </td>
+			        </tr>	               
                 	<tr>
                 		<td style="width: 10%;">Nome:</td>
                 		<td colspan="3"><input type="text" id="txtNome" value="<?=$linha['NOME']?>"></td>
@@ -183,6 +194,7 @@ $total1 = mysql_num_rows($dados1);
 			        	</td>
 			        	<td  colspan="3">
 			        		<select id="cboGrupo">
+			        						<option></option>
 			                				<option value="1" <?=($linha['ID_GRUPO']=='1'?'Selected':'')?>>Grupo 1</option>
 			                				<option value="2" <?=($linha['ID_GRUPO']=='2'?'Selected':'')?>>Grupo 2</option>
 			                				<option value="3" <?=($linha['ID_GRUPO']=='3'?'Selected':'')?>>Grupo 3</option>

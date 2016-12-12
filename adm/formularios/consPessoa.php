@@ -3,7 +3,7 @@
 include '../../php/conexao_mysql.php';
 
 // cria a instrução SQL que vai selecionar os dados da query1
-$query = sprintf("SELECT * FROM PESSOA ORDER BY ID_GRUPO, COMUNIDADE, NOME");
+$query = sprintf("SELECT * FROM PESSOA WHERE ID_STATUS <> '2' ORDER BY ID_GRUPO, COMUNIDADE, NOME");
 // executa a query
 $dados = mysql_query($query, $con) or die(mysql_error());
 // transforma os dados em um array

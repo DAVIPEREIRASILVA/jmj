@@ -8,6 +8,7 @@ function salvarPessoa(){
 		dados="";
 		
 		dados = "hdnIdPessoa=" + document.getElementById('hdnIdPessoa').value;
+		dados += "&cboStatus=" + document.getElementById('cboStatus').value;
 		dados += "&txtNome=" + document.getElementById('txtNome').value;
 		dados += "&cboSexo=" + document.getElementById('cboSexo').value;
 		dados += "&txtDtNasc=" + document.getElementById('txtDtNasc').value;
@@ -24,7 +25,8 @@ function salvarPessoa(){
 			alert('Cadastro Efetuado com sucesso!');
 			window.open("http://guarulhosjmj2019.esy.es/adm/formularios/consPessoa.php", "_self");		}
 	}else{	
-		dados = "txtNome=" + document.getElementById('txtNome').value;
+		dados = "cboStatus=" + document.getElementById('cboStatus').value;
+		dados += "&txtNome=" + document.getElementById('txtNome').value;
 		dados += "&cboSexo=" + document.getElementById('cboSexo').value;
 		dados += "&txtDtNasc=" + document.getElementById('txtDtNasc').value;
 		dados += "&cboComunidade=" + document.getElementById('cboComunidade').value;

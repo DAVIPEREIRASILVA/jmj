@@ -24,6 +24,7 @@ switch ($_POST ["filtro"]) {
 
 
 function cadPessoa(){
+$cboStatus = $_POST['cboStatus'];   // Recendo o que foi digitado no campo nome do formulário.
 $txtnome = $_POST['txtNome'];   // Recendo o que foi digitado no campo nome do formulário.
 $cboSexo= $_POST['cboSexo'];   // Recendo o que foi digitado no campo nome do formulário.
 $txtDtNasc= $_POST['txtDtNasc'];   // Recendo o que foi digitado no campo nome do formulário.
@@ -35,13 +36,14 @@ $txtEmail= $_POST['txtEmail'];   // Recendo o que foi digitado no campo nome do 
 $txtNomeResponsavel= $_POST['txtNomeResponsavel'];   // Recendo o que foi digitado no campo nome do formulário.
 $txtCelResponsavel= $_POST['txtCelResponsavel'];   // Recendo o que foi digitado no campo nome do formulário.
 		
-	$query = mysql_query("INSERT INTO PESSOA (NOME, SEXO, NASC, COMUNIDADE, ID_GRUPO, TEL_FIXO, CELULAR, EMAIL, NOME_RESP, CEL_RESP) VALUES ('$txtnome','$cboSexo','$txtDtNasc','$cboComunidade','$cboGrupo', '$txtTelFixo','$txtTelCel','$txtEmail','$txtNomeResponsavel','$txtCelResponsavel' )");
+	$query = mysql_query("INSERT INTO PESSOA (ID_STATUS, NOME, SEXO, NASC, COMUNIDADE, ID_GRUPO, TEL_FIXO, CELULAR, EMAIL, NOME_RESP, CEL_RESP) VALUES ('$cboStatus','$txtnome','$cboSexo','$txtDtNasc','$cboComunidade','$cboGrupo', '$txtTelFixo','$txtTelCel','$txtEmail','$txtNomeResponsavel','$txtCelResponsavel' )");
 	echo $query;
 }
 
 function upDatePessoa(){
 	
-	$hdnIdPessoa = $_POST['hdnIdPessoa'];   // Recendo o que foi digitado no campo nome do formulário.		
+	$hdnIdPessoa = $_POST['hdnIdPessoa'];   // Recendo o que foi digitado no campo nome do formulário.	
+	$cboStatus = $_POST['cboStatus'];   // Recendo o que foi digitado no campo nome do formulário.
 	$txtnome = $_POST['txtNome'];   // Recendo o que foi digitado no campo nome do formulário.
 	$cboSexo= $_POST['cboSexo'];   // Recendo o que foi digitado no campo nome do formulário.
 	$txtDtNasc= $_POST['txtDtNasc'];   // Recendo o que foi digitado no campo nome do formulário.
@@ -53,7 +55,7 @@ function upDatePessoa(){
 	$txtNomeResponsavel= $_POST['txtNomeResponsavel'];   // Recendo o que foi digitado no campo nome do formulário.
 	$txtCelResponsavel= $_POST['txtCelResponsavel'];   // Recendo o que foi digitado no campo nome do formulário.
 
-	$result = mysql_query("UPDATE PESSOA SET NOME='$txtnome', SEXO='$cboSexo', NASC='$txtDtNasc', COMUNIDADE='$cboComunidade', ID_GRUPO='$cboGrupo', TEL_FIXO='$txtTelFixo', CELULAR='$txtTelCel', EMAIL='$txtEmail', NOME_RESP='$txtNomeResponsavel', CEL_RESP='$txtCelResponsavel' WHERE ID_PESSOA=$hdnIdPessoa");
+	$result = mysql_query("UPDATE PESSOA SET ID_STATUS='$cboStatus', NOME='$txtnome', SEXO='$cboSexo', NASC='$txtDtNasc', COMUNIDADE='$cboComunidade', ID_GRUPO='$cboGrupo', TEL_FIXO='$txtTelFixo', CELULAR='$txtTelCel', EMAIL='$txtEmail', NOME_RESP='$txtNomeResponsavel', CEL_RESP='$txtCelResponsavel' WHERE ID_PESSOA=$hdnIdPessoa");
 	if ($result != 1) {
   	  die('Invalid query: ' . mysql_error());
 	}else{ echo $result;}
