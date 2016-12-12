@@ -49,14 +49,32 @@ function salvarPessoa(){
 function exibeFormSolteiro(){
 	$("#divFormSolteiro").show('fast');
 	$("#divFormCasal").hide('fast');
-	};
+};
 
-	function exibeFormCasal(){
-		$("#divFormCasal").show('fast');
-		$("#divFormSolteiro").hide('fast');
-		};		
+function exibeFormCasal(){
+	$("#divFormCasal").show('fast');
+	$("#divFormSolteiro").hide('fast');
+};		
 		
-		
+
+	
+function exibeTabAtivo(){
+	$("#divPessoasAtivas").show('fast');
+	$("#divPessoasInativas").hide('fast');
+};	
+	
+	
+function exibeTabInativo(){
+	$("#divPessoasInativas").show('fast');
+	$("#divPessoasAtivas").hide('fast');
+};		
+	
+	
+	
+	
+	
+	
+	
 function verificamenor(){
 	
 	nascimento= document.getElementById('txtDtNasc').value;
