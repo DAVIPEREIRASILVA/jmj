@@ -45,7 +45,9 @@ $total1 = mysql_num_rows($dados1);
 		<script type="text/javascript" language="javascript" src="../../MacDataTables/Scripts/jquery.dataTables.js"></script>
 		<script type="text/javascript" charset="utf-8">
 			$(document).ready(function() {
-				$('#tabPessoasAtivas').dataTable();
+				$('#tabPessoasAtivas').dataTable({
+					"iDisplayLength": 100
+					});
 			} );
 		</script>
 
