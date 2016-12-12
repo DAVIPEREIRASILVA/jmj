@@ -67,6 +67,7 @@ function exibeTabAtivo(){
 function exibeTabInativo(){
 	$("#divPessoasInativas").show('fast');
 	$("#divPessoasAtivas").hide('fast');
+	$('#tabPessoasInativas').dataTable();
 };		
 	
 	

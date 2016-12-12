@@ -46,9 +46,9 @@ $total1 = mysql_num_rows($dados1);
 		<script type="text/javascript" charset="utf-8">
 			$(document).ready(function() {
 				$('#tabPessoasAtivas').dataTable();
-				$('#tabPessoasInativas').dataTable();
 			} );
 		</script>
+
 		
 		
 
@@ -166,7 +166,7 @@ $total1 = mysql_num_rows($dados1);
 
 
 <!-- *******************Início Tabela de Pessoas Inativas*************************** -->	  
- 				<div id="divPessoasInativas" style="display:none">
+ 				<div id="divPessoasInativas"  style= "display:none">
  					<div>
  						<table border="1" align="center" id="tabPessoasInativas">
  						<caption><h3>Jovens Cadastrados (Inativos): <?php echo $total1;?></h3></caption>
@@ -212,7 +212,7 @@ $total1 = mysql_num_rows($dados1);
 		do {
 ?>
 <tr>
-<td><?=$linha1['ID_GRUPO']?></td>
+<td>G-<?=$linha1['ID_GRUPO']?></td>
 <td><?=$linha1['COMUNIDADE']?></td>
 <td><?=$linha1['NOME']?></td>
 <td class="oculta_td"><?=$linha1['NASC']?></td>
