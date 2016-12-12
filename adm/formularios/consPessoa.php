@@ -1,5 +1,5 @@
 <?php
-/*
+
 include '../../php/conexao_mysql.php';
 
 // cria a instrução SQL que vai selecionar os dados da query
@@ -20,7 +20,7 @@ $dados1 = mysql_query($query1, $con) or die(mysql_error());
 $linha1 = mysql_fetch_assoc($dados1);
 // calcula quantos dados retornaram
 $total1 = mysql_num_rows($dados1);
-*/
+
 ?>
 
 
