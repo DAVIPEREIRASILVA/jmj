@@ -1,5 +1,5 @@
 <?php
-
+/*
 include '../../php/conexao_mysql.php';
 
 // cria a instrução SQL que vai selecionar os dados da query
@@ -20,7 +20,7 @@ $dados1 = mysql_query($query1, $con) or die(mysql_error());
 $linha1 = mysql_fetch_assoc($dados1);
 // calcula quantos dados retornaram
 $total1 = mysql_num_rows($dados1);
-
+*/
 ?>
 
 
@@ -41,6 +41,16 @@ $total1 = mysql_num_rows($dados1);
 		<script type="text/javascript" src="../../js/jquery.js"></script>
                 
 		<script type="text/javascript" src="../../js/inscricao.js"></script>
+		<script type="text/javascript" language="javascript" src="../../MacDataTables/Scripts/jquery.js"></script>
+		<script type="text/javascript" language="javascript" src="../../MacDataTables/Scripts/jquery.dataTables.js"></script>
+		<script type="text/javascript" charset="utf-8">
+			$(document).ready(function() {
+				$('#tabPessoasAtivas').dataTable();
+				$('#tabPessoasInativas').dataTable();
+			} );
+		</script>
+		
+		
 
         <!-- CSS -->
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lobster">
@@ -87,7 +97,7 @@ $total1 = mysql_num_rows($dados1);
  <!-- *******************Início Tabela de Pessoas Ativas*************************** -->	  
  				<div id="divPessoasAtivas" style= "display:block">
  					<div>
- 						<table border="1" align="center">
+ 						<table border="1" align="center" id="tabPessoasAtivas">
  						<caption><h3>Jovens Cadastrados (Ativos): <?php echo $total;?></h3></caption>
  							<thead>
  								<tr bgcolor="#708090" style="color:#ffffff;">
@@ -131,7 +141,7 @@ $total1 = mysql_num_rows($dados1);
 		do {
 ?>
 <tr>
-<td><?=$linha['ID_GRUPO']?></td>
+<td>G-<?=$linha['ID_GRUPO']?></td>
 <td><?=$linha['COMUNIDADE']?></td>
 <td><?=$linha['NOME']?></td>
 <td class="oculta_td"><?=$linha['NASC']?></td>
@@ -158,7 +168,7 @@ $total1 = mysql_num_rows($dados1);
 <!-- *******************Início Tabela de Pessoas Inativas*************************** -->	  
  				<div id="divPessoasInativas" style="display:none">
  					<div>
- 						<table border="1" align="center">
+ 						<table border="1" align="center" id="tabPessoasInativas">
  						<caption><h3>Jovens Cadastrados (Inativos): <?php echo $total1;?></h3></caption>
  							<thead>
  								<tr bgcolor="#708090" style="color:#ffffff;">
@@ -229,7 +239,7 @@ $total1 = mysql_num_rows($dados1);
 				
         
         <!-- Javascript -->
-        <script src="../../assets/js/jquery-1.11.1.min.js"></script>
+
         <script src="../../assets/bootstrap/js/bootstrap.min.js"></script>
         <script src="../../assets/js/jquery.backstretch.min.js"></script>
         <script src="../../assets/js/jquery.countdown.min.js"></script>
