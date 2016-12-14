@@ -202,7 +202,7 @@ function salvarAcao(){
 	dados += "&txtDescricao=" + document.getElementById('txtDescricao').value;
 
 	var varResposta = chamar_ajax('../../php/sql.php', 'filtro=cadAcao&'+dados, false, 'text', null);
-	alert(varResposta);
+	window.open("cadAcao.php?idAcao="+varResposta,"_self");
 	
 }
 

@@ -1,9 +1,9 @@
 <?php
-/*
+
 include '../../php/conexao_mysql.php';
 
 // cria a instrução SQL que vai selecionar os dados da query
-$idAta = $_GET['idAcao'];
+$idAcao = $_GET['idAcao'];
 
 $query = sprintf("SELECT * FROM ACAO WHERE ID_ACAO='$idAcao'");
 // executa a query
@@ -12,7 +12,11 @@ $dados = mysql_query($query, $con) or die(mysql_error());
 $linha = mysql_fetch_assoc($dados);
 // calcula quantos dados retornaram
 $total = mysql_num_rows($dados);
-*/
+
+
+
+
+
 ?>
 
 
@@ -97,6 +101,8 @@ $total = mysql_num_rows($dados);
                 	
 			     </tbody>
 			</table>
+
+			<div id="divParticipantes" <?=($linha['ID_ACAO']!=''?'':'style="display:none"')?>>			
 			<table align="center" border="1">
 				<caption><h3>Participantes</h3></caption>
 				<thead>
@@ -131,7 +137,7 @@ $total = mysql_num_rows($dados);
 				</tr>
 			
 			</table>
-			
+			</div>
 			
 			
 			     
