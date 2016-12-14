@@ -125,6 +125,15 @@ function cadAcao(){
 
 	$query = mysql_query("INSERT INTO ACAO (NOME, DT_INICIO, DT_FIM, DESCRICAO) VALUES ('$txtNome','$txtDataInicio','$txtDataFim','$txtDescricao')");
 
+	$host = "mysql.hostinger.com.br";
+	$db   = "u480003925_jmj";
+	$user = "u480003925_jmj";
+	$pass = "331088";
+	// conecta ao banco de dados
+	$con = mysql_pconnect($host, $user, $pass) or trigger_error(mysql_error(),E_USER_ERROR);
+	// seleciona a base de dados em que vamos trabalhar
+	mysql_select_db($db, $con);
+	
 	$ultimo_id = mysql_insert_id($con);
 	echo $ultimo_id;
 }
