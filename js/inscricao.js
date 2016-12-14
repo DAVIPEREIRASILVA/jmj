@@ -46,6 +46,7 @@ function salvarPessoa(){
 }
 
 
+
 function exibeFormSolteiro(){
 	$("#divFormSolteiro").show('fast');
 	$("#divFormCasal").hide('fast');
@@ -181,4 +182,30 @@ function salvarAta(){
 			}
 		}
 }
+
+function mudarStatusParticipacao(status,idPessoa){
+	if(status==0){
+		alert('ativando status');
+		$('#cbId'+idPessoa).attr('onclick','mudarStatusParticipacao(1,'+idPessoa+')');	
+		
+	}else{
+		alert('desativando status');
+		$('#cbId'+idPessoa).attr('onclick','mudarStatusParticipacao(0,'+idPessoa+')');	
+	}
+}
+
+
+function salvarAcao(){
+	dados = "txtNome=" + document.getElementById('txtNome').value;
+	dados += "&txtDataInicio=" + document.getElementById('txtDataInicio').value;
+	dados += "&txtDataFim=" + document.getElementById('txtDataFim').value;
+	dados += "&txtDescricao=" + document.getElementById('txtDescricao').value;
+
+	var varResposta = chamar_ajax('../../php/sql.php', 'filtro=cadAcao&'+dados, false, 'text', null);
+	alert(varResposta);
+	
+}
+
+
+
 

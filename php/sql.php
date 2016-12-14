@@ -19,8 +19,13 @@ switch ($_POST ["filtro"]) {
     case 'upDateAta':
     	upDateAta();
     	break;
+    case 'cadAcao':
+    	cadAcao();
+    	break;
+    
     default:
-    break;}
+    break;
+}
 
 
 function cadPessoa(){
@@ -107,6 +112,28 @@ function upDateAta(){
 	if ($result != 1) {
 		die('Invalid query: ' . mysql_error());
 	}else{ echo $result;}
+}
+
+
+
+function cadAcao(){
+	$txtNome = $_POST['txtNome'];   // Recendo o que foi digitado no campo nome do formulário.
+	$txtDataInicio = $_POST['txtDataInicio'];   // Recendo o que foi digitado no campo nome do formulário.
+	$txtDataFim= $_POST['txtDataFim'];   // Recendo o que foi digitado no campo nome do formulário.
+	$txtDescricao= $_POST['txtDescricao'];   // Recendo o que foi digitado no campo nome do formulário.
+
+
+	$ssql= "INSERT INTO ACAO (NOME, DT_INICIO, DT_FIM, DESCRICAO) VALUES ('$txtNome','$txtDataInicio','$txtDataFim','$txtDescricao')";
+
+	//inserto-o na base de dados
+	if (mysql_query($ssql,$con)){	
+
+	//recebo o último id
+	$ultimo_id = mysql_insert_id($con);
+	echo $ultimo_id;
+	}else{
+		echo "A inserção não se realizou";
+	}
 }
 
 
