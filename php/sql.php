@@ -123,17 +123,10 @@ function cadAcao(){
 	$txtDescricao= $_POST['txtDescricao'];   // Recendo o que foi digitado no campo nome do formulário.
 
 
-	$ssql= "INSERT INTO ACAO (NOME, DT_INICIO, DT_FIM, DESCRICAO) VALUES ('$txtNome','$txtDataInicio','$txtDataFim','$txtDescricao')";
+	$query = mysql_query("INSERT INTO ACAO (NOME, DT_INICIO, DT_FIM, DESCRICAO) VALUES ('$txtNome','$txtDataInicio','$txtDataFim','$txtDescricao')");
 
-	//inserto-o na base de dados
-	if (mysql_query($ssql,$con)){	
-
-	//recebo o último id
 	$ultimo_id = mysql_insert_id($con);
 	echo $ultimo_id;
-	}else{
-		echo "A inserção não se realizou";
-	}
 }
 
 
