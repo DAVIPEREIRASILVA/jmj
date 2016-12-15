@@ -148,7 +148,7 @@ $total1 = mysql_num_rows($dados1);
 					<td ><?=$linha1['NOME']?></td></tr>
 <?php
 		// finaliza o loop que vai mostrar os dados
-		}while($linha = mysql_fetch_assoc($dados));
+		}while($linha = mysql_fetch_assoc($dados1));
 	// fim do if 
 	}
 ?>
