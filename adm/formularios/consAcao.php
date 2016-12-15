@@ -111,8 +111,8 @@ $total = mysql_num_rows($dados);
 	}
 ?>
                 				       <tr>
-			       	<td colspan="2" align="center">
-			       		<input type="button" value="Cadastrar nova A&ccedil;&atilde;0" onclick="novaAcao()">
+			       	<td colspan="4" align="center">
+			       		<input type="button" value="Cadastrar nova A&ccedil;&atilde;o" onclick="novaAcao()">
 			       	</td>
 			       </tr>
 					             </tbody>
