@@ -209,12 +209,22 @@ function mudarStatusParticipacao(status,idPessoa, idParticipacao,idTipoEvento, i
 
 
 
-
-
-
-
-
 function salvarAcao(){
+	
+	if(document.getElementById('hdnIdAcao').value!=''){	
+		dados="";	
+		
+		dados = "hdnIdAcao="+document.getElementById('hdnIdAcao').value;
+		dados += "&txtNome=" + document.getElementById('txtNome').value;
+		dados += "&txtDataInicio=" + document.getElementById('txtDataInicio').value;
+		dados += "&txtDataFim=" + document.getElementById('txtDataFim').value;
+		dados += "&txtDescricao=" + document.getElementById('txtDescricao').value;
+
+		var varResposta = chamar_ajax('../../php/sql.php', 'filtro=upDateAcao&'+dados, false, 'text', null);
+		alert('Atualizada com sucesso!');	
+		
+	}else{
+	
 	dados = "txtNome=" + document.getElementById('txtNome').value;
 	dados += "&txtDataInicio=" + document.getElementById('txtDataInicio').value;
 	dados += "&txtDataFim=" + document.getElementById('txtDataFim').value;
@@ -223,8 +233,8 @@ function salvarAcao(){
 	var varResposta = chamar_ajax('../../php/sql.php', 'filtro=cadAcao&'+dados, false, 'text', null);
 	window.open("cadAcao.php?idAcao="+varResposta,"_self");
 	
+	}
 }
-
 
 
 

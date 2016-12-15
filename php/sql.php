@@ -22,6 +22,9 @@ switch ($_POST ["filtro"]) {
     case 'cadAcao':
     	cadAcao();
     	break;
+    	case 'upDateAcao':
+    		upDateAcao();
+    		break;
     	case 'cadParticipacao':
     		cadParticipacao();
     		break;
@@ -173,8 +176,16 @@ function cadAcao(){
 }
 
 
+function upDateAcao(){
+	$hdnIdAcao= $_POST['hdnIdAcao'];   // Recendo o que foi digitado no campo nome do formulário. 
+	$txtNome = $_POST['txtNome'];   // Recendo o que foi digitado no campo nome do formulário.
+	$txtDataInicio = $_POST['txtDataInicio'];   // Recendo o que foi digitado no campo nome do formulário.
+	$txtDataFim= $_POST['txtDataFim'];   // Recendo o que foi digitado no campo nome do formulário.
+	$txtDescricao= $_POST['txtDescricao'];   // Recendo o que foi digitado no campo nome do formulário.
 
 
+	$query = mysql_query("UPDATE ACAO SET NOME='$txtNome', DT_INICIO='$txtDataInicio', DT_FIM='$txtDataFim', DESCRICAO='$txtDescricao WHERE ID_ACAO='$hdnIdAcao'");
+}
 
 
 ?>			
