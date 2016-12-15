@@ -177,7 +177,7 @@ function upDateAcao(){
 	$txtDataFim= $_POST['txtDataFim'];   // Recendo o que foi digitado no campo nome do formulário.
 	$txtDescricao= $_POST['txtDescricao'];   // Recendo o que foi digitado no campo nome do formulário.
 
-	$result = mysql_query("UPDATE ACAO SET NOME='$txtNome', DT_INICIO='$txtDataInicio', DT_FIM='$txtDataFim', DESCRICAO='$txtDescricao WHERE ID_ACAO='$hdnIdAcao'");
+	$result = mysql_query("UPDATE ACAO SET NOME='$txtNome', DT_INICIO='$txtDataInicio', DT_FIM='$txtDataFim', DESCRICAO='$txtDescricao' WHERE ID_ACAO=$hdnIdAcao");
 	if ($result != 1) {
 		die('Invalid query: ' . mysql_error());
 	}else{ echo $result;}
