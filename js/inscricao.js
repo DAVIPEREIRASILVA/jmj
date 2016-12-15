@@ -111,6 +111,10 @@ function novaAta(det){
 	window.open("cadAta.php","_self");
 }
 
+function novaAcao(det){
+	window.open("cadAcao.php","_self");
+}
+
 
 function detalheAcao(det){
 	window.open("cadAcao.php?idAcao="+det,"_self");

@@ -110,6 +110,11 @@ $total = mysql_num_rows($dados);
 	// fim do if 
 	}
 ?>
+                				       <tr>
+			       	<td colspan="2" align="center">
+			       		<input type="button" value="Cadastrar nova A&ccedil;&atilde;0" onclick="novaAcao()">
+			       	</td>
+			       </tr>
 					             </tbody>
  						</table>
 					</div>     	 
