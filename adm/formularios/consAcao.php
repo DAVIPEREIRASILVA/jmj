@@ -98,7 +98,7 @@ $total = mysql_num_rows($dados);
 		do {
 ?>
 <tr>
-<td>G-<?=$linha['NOME']?></td>
+<td><?=$linha['NOME']?></td>
 <td class="oculta_td"><?=$linha['DT_INICIO']?></td>
 <td class="oculta_td"><?=$linha['DT_FIM']?></td>
 
