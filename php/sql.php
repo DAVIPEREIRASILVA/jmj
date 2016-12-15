@@ -151,17 +151,13 @@ function upDateAta(){
 	}else{ echo $result;}
 }
 
-
-
 function cadAcao(){
 	$txtNome = $_POST['txtNome'];   // Recendo o que foi digitado no campo nome do formulário.
 	$txtDataInicio = $_POST['txtDataInicio'];   // Recendo o que foi digitado no campo nome do formulário.
 	$txtDataFim= $_POST['txtDataFim'];   // Recendo o que foi digitado no campo nome do formulário.
 	$txtDescricao= $_POST['txtDescricao'];   // Recendo o que foi digitado no campo nome do formulário.
 
-
 	$query = mysql_query("INSERT INTO ACAO (NOME, DT_INICIO, DT_FIM, DESCRICAO) VALUES ('$txtNome','$txtDataInicio','$txtDataFim','$txtDescricao')");
-
 	$host = "mysql.hostinger.com.br";
 	$db   = "u480003925_jmj";
 	$user = "u480003925_jmj";
@@ -170,11 +166,9 @@ function cadAcao(){
 	$con = mysql_pconnect($host, $user, $pass) or trigger_error(mysql_error(),E_USER_ERROR);
 	// seleciona a base de dados em que vamos trabalhar
 	mysql_select_db($db, $con);
-	
 	$ultimo_id = mysql_insert_id($con);
 	echo $ultimo_id;
 }
-
 
 function upDateAcao(){
 	$hdnIdAcao= $_POST['hdnIdAcao'];   // Recendo o que foi digitado no campo nome do formulário. 
@@ -183,11 +177,11 @@ function upDateAcao(){
 	$txtDataFim= $_POST['txtDataFim'];   // Recendo o que foi digitado no campo nome do formulário.
 	$txtDescricao= $_POST['txtDescricao'];   // Recendo o que foi digitado no campo nome do formulário.
 
-
-	$query = mysql_query("UPDATE ACAO SET NOME='$txtNome', DT_INICIO='$txtDataInicio', DT_FIM='$txtDataFim', DESCRICAO='$txtDescricao WHERE ID_ACAO='$hdnIdAcao'");
-	echo $query;
-
+	$result = mysql_query("UPDATE ACAO SET NOME='$txtNome', DT_INICIO='$txtDataInicio', DT_FIM='$txtDataFim', DESCRICAO='$txtDescricao WHERE ID_ACAO='$hdnIdAcao'");
+	if ($result != 1) {
+		die('Invalid query: ' . mysql_error());
+	}else{ echo $result;}
 }
-
+	
 
 ?>			
