@@ -74,7 +74,7 @@ $total = mysql_num_rows($dados);
  				<div id="divAcoes">
  					<div>
  						<table border="1" align="center">
- 						<caption><h3>Jovens Cadastrados (Ativos): <?php echo $total;?></h3></caption>
+ 						<caption><h3>A&ccedil;&otilde;es Cadastradas: <?php echo $total;?></h3></caption>
  							<thead>
  								<tr bgcolor="#708090" style="color:#ffffff;">
  									<td style="vertical-align: middle;" align="center">
