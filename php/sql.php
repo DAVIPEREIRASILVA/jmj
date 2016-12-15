@@ -22,10 +22,44 @@ switch ($_POST ["filtro"]) {
     case 'cadAcao':
     	cadAcao();
     	break;
+    	case 'cadParticipacao':
+    		cadParticipacao();
+    		break;
+    		case 'delParticipacao':
+    			delParticipacao();
+    			break;
     
     default:
     break;
 }
+
+
+
+function cadParticipacao(){
+	$idTipoEvento = $_POST['idTipoEvento'];   // Recendo o que foi digitado no campo nome do formulário.
+	$idEvento = $_POST['idEvento'];   // Recendo o que foi digitado no campo nome do formulário.
+	$idPessoa= $_POST['idPessoa'];   // Recendo o que foi digitado no campo nome do formulário.
+	
+	$query = mysql_query("INSERT INTO PARTICIPACAO (ID_TIPOEVENTO, ID_EVENTO, ID_PESSOA) VALUES ('$idTipoEvento','$idEvento','$idPessoa')");
+	echo $query;
+}
+
+
+function delParticipacao(){
+	$idParticipacao = $_POST['idParticipacao'];   // Recendo o que foi digitado no campo nome do formulário.
+
+	$query = mysql_query("DELETE FROM PARTICIPACAO WHERE ID_PARTICIPACAO='$idParticipacao'");
+	echo $query;
+}
+
+
+
+
+
+
+
+
+
 
 
 function cadPessoa(){

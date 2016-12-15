@@ -183,16 +183,29 @@ function salvarAta(){
 		}
 }
 
-function mudarStatusParticipacao(status,idPessoa, idParticipacao){
+function mudarStatusParticipacao(status,idPessoa, idParticipacao,idTipoEvento, idEvento){
 	if(status==0){
 		alert('ativando status');
-		$('#cbId'+idPessoa).attr('onclick','mudarStatusParticipacao(1,'+idPessoa+')');	
+		$('#cbId'+idPessoa).attr('onclick','mudarStatusParticipacao(1,'+idPessoa+','+idParticipacao+','+idTipoEvento+','+idEvento+')');
+		
+		dados = "idTipoEvento="+idTipoEvento+"&idEvento="+idEvento+"&idPessoa="+idPessoa;
+		var varResposta = chamar_ajax('../../php/sql.php', 'filtro=cadParticipacao&'+dados, false, 'text', null);
 		
 	}else{
 		alert('desativando status');
-		$('#cbId'+idPessoa).attr('onclick','mudarStatusParticipacao(0,'+idPessoa+')');	
+		$('#cbId'+idPessoa).attr('onclick','mudarStatusParticipacao(0,'+idPessoa+','+idParticipacao+','+idTipoEvento+','+idEvento+')');	
+		dados = "idParticipacao="+idParticipacao;
+		var varResposta = chamar_ajax('../../php/sql.php', 'filtro=delParticipacao&'+dados, false, 'text', null);
+	
+	
 	}
 }
+
+
+
+
+
+
 
 
 function salvarAcao(){
