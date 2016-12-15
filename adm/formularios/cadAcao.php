@@ -97,11 +97,11 @@ $total1 = mysql_num_rows($dados1);
 			       </tr>
                 	<tr>
                 		<td>Inicio:</td>
-                		<td colspan="2"><input type="date" id="txtDataInicio" size="25" value="<?=$linha['DATA_INICIO']?>"></td>
+                		<td colspan="2"><input type="date" id="txtDataInicio" size="25" value="<?= date('d/m/Y',$linha['DATA_INICIO'])?>"></td>
                 	</tr>
                 	<tr>
                 		<td>Fim:</td>
-                		<td colspan="2"><input type="date" id="txtDataFim" size="25" value="<?=$linha['DATA_FIM']?>"></td>
+                		<td colspan="2"><input type="date" id="txtDataFim" size="25" value="<?= date('d/m/Y',$linha['DATA_FIM'])?>"></td>
                 	</tr>
 					<tr>
                 		<td colspan="3">
