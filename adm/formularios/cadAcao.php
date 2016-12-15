@@ -143,7 +143,7 @@ $total1 = mysql_num_rows($dados1);
 				<tr>
 					<td width="12%" align="center" >
 						<input type="checkbox" id="cbId<?=$linha1['ID_PESSOA']?>"
-						 onclick="mudarStatusParticipacao(<?=($linha1['ID_PARTICIPACAO']!=''?'1':'0')?>,<?=$linha1['ID_PESSOA']?>,<?=$linha1['ID_PARTICIPACAO']?>)"
+						 onclick="mudarStatusParticipacao(<?=($linha1['ID_PARTICIPACAO']!=''?'1':'0')?>,<?=$linha1['ID_PESSOA']?>,<?=($linha1['ID_PARTICIPACAO']!=''?$linha1['ID_PARTICIPACAO']:'0')?>)"
 						 <?=($linha1['ID_PARTICIPACAO']!=''?'checked="checked"':'')?>>
 					</td>
 					<td ><?=$linha1['NOME']?></td></tr>
