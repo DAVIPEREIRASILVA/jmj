@@ -183,7 +183,7 @@ function salvarAta(){
 		}
 }
 
-function mudarStatusParticipacao(status,idPessoa){
+function mudarStatusParticipacao(status,idPessoa, idParticipacao){
 	if(status==0){
 		alert('ativando status');
 		$('#cbId'+idPessoa).attr('onclick','mudarStatusParticipacao(1,'+idPessoa+')');	

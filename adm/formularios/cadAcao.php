@@ -17,10 +17,14 @@ $total = mysql_num_rows($dados);
 
 
 $query1 = sprintf(
-		"SELECT a.ID_PESSOA, a.NOME, b.ID_ACAO FROM PESSOA a
-		LEFT JOIN PARTICIPACAO b ON a.ID_PESSOA = b.ID_PESSOA
-		WHERE b.ID_EVENTO='$idAcao' AND
-		ID_TIPOEVENTO=1
+		"SELECT A.ID_PESSOA, A.NOME, B.ID_PARTICIPACAO FROM PESSOA A
+		LEFT JOIN
+		(
+		SELECT * FROM PARTICIPACAO 
+		WHERE ID_TIPOEVENTO=1 AND 
+		ID_EVENTO = '$idAcao'
+		) B ON A.ID_PESSOA = B.ID_PESSOA
+		WHERE A.ID_STATUS = 1
 		");
 // executa a query
 $dados1 = mysql_query($query1, $con) or die(mysql_error());
@@ -123,36 +127,34 @@ $total1 = mysql_num_rows($dados1);
 						<td >
 						</td>
 						<td>
-							Grupo
-						</td>
-						<td>
 							Nome
-						</td>
-						<td>
-							Colabora&ccedil;&atilde;o
 						</td>
 					</tr>
 				</thead>
+				<tbody>
+
+<?php
+	// se o número de resultados for maior que zero, mostra os dados
+	if($total1 > 0) {
+		// inicia o loop que vai mostrar todos os dados
+		do {
+?>
 				<tr>
 					<td width="12%" align="center" >
-						<input type="checkbox" id="cbId1" onclick="mudarStatusParticipacao(1,1)" checked="checked">
+						<input type="checkbox" id="cbId<?=$linha1['ID_PESSOA']?>"
+						 onclick="mudarStatusParticipacao(<?=($linha1['ID_PARTICIPACAO']!=''?'1':'0')?>,<?=$linha1['ID_PESSOA']?>,<?=$linha1['ID_PARTICIPACAO']?>)"
+						 <?=($linha1['ID_PARTICIPACAO']!=''?'checked="checked"':'')?>>
 					</td>
-					<td>
-						G-1
-					</td>
-					<td>
-						Fulano de tal
-					</td>
-					<td>
-						<input type="text"/ id="txtId1">
-					</td>
-				</tr>
-			
+					<td ><?=$linha1['NOME']?></td></tr>
+<?php
+		// finaliza o loop que vai mostrar os dados
+		}while($linha = mysql_fetch_assoc($dados));
+	// fim do if 
+	}
+?>
+	             </tbody>
 			</table>
-			</div>
-			
-			
-			     
+		</div>
 		</div>
 	</div>
 
