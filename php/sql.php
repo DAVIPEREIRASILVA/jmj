@@ -185,6 +185,8 @@ function upDateAcao(){
 
 
 	$query = mysql_query("UPDATE ACAO SET NOME='$txtNome', DT_INICIO='$txtDataInicio', DT_FIM='$txtDataFim', DESCRICAO='$txtDescricao WHERE ID_ACAO='$hdnIdAcao'");
+	echo $query;
+
 }
 
 
