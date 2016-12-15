@@ -234,8 +234,9 @@ $total1 = mysql_num_rows($dados1);
 			                Sexo:
 			            </td>
 			            <td><select id="cboSexo">
-			                				<option value="Masculino">Masculino</option>
-			                				<option value="Feminino">Feminino</option>
+			            					<option></option>
+			                				<option value="Masculino" <?=($linha['SEXO']=='Masculino'?'Selected':'')?>>Masculino</option>
+			                				<option value="Feminino" <?=($linha['SEXO']=='Feminino'?'Selected':'')?>>Feminino</option>
 			                </select>
 			            </td>
 			        </tr>
