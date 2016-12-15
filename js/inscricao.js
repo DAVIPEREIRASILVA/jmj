@@ -221,7 +221,8 @@ function salvarAcao(){
 		dados += "&txtDescricao=" + document.getElementById('txtDescricao').value;
 
 		var varResposta = chamar_ajax('../../php/sql.php', 'filtro=upDateAcao&'+dados, false, 'text', null);
-		alert('Atualizada com sucesso!');	
+		alert('Atualizada com sucesso!');
+		alert(varResposta);
 		
 	}else{
 	
