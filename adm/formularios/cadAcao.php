@@ -25,6 +25,7 @@ $query1 = sprintf(
 		ID_EVENTO = '$idAcao'
 		) B ON A.ID_PESSOA = B.ID_PESSOA
 		WHERE A.ID_STATUS = 1
+		ORDER BY A.NOME
 		");
 // executa a query
 $dados1 = mysql_query($query1, $con) or die(mysql_error());
@@ -148,7 +149,7 @@ $total1 = mysql_num_rows($dados1);
 					<td ><?=$linha1['NOME']?></td></tr>
 <?php
 		// finaliza o loop que vai mostrar os dados
-		}while($linha = mysql_fetch_assoc($dados1));
+		}while($linha1 = mysql_fetch_assoc($dados1));
 	// fim do if 
 	}
 ?>
