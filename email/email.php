@@ -9,7 +9,7 @@ $mail = new PHPMailer();
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 $mail->IsSMTP(); // Define que a mensagem será SMTP
 $mail->Host = "smtp.gmail.com"; // Endereço do servidor SMTP
-$mail->SMTPAuth = true; // Usa autenticação SMTP? (opcional)
+$mail->SMTPAuth = false; // Usa autenticação SMTP? (opcional)
 $mail->Username = 'davi.pereirasilva@gmail.com'; // Usuário do servidor SMTP
 $mail->Password = 'concurso2015'; // Senha do servidor SMTP
 // Define o remetente
