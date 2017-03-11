@@ -56,15 +56,6 @@ function delParticipacao(){
 }
 
 
-
-
-
-
-
-
-
-
-
 function cadPessoa(){
 $cboStatus = $_POST['cboStatus'];   // Recendo o que foi digitado no campo nome do formulário.
 $txtnome = $_POST['txtNome'];   // Recendo o que foi digitado no campo nome do formulário.
@@ -155,9 +146,11 @@ function cadAcao(){
 	$txtNome = $_POST['txtNome'];   // Recendo o que foi digitado no campo nome do formulário.
 	$txtDataInicio = $_POST['txtDataInicio'];   // Recendo o que foi digitado no campo nome do formulário.
 	$txtDataFim= $_POST['txtDataFim'];   // Recendo o que foi digitado no campo nome do formulário.
+	$txtGasto= $_POST['txtGasto'];   // Recendo o que foi digitado no campo nome do formulário.
+	$txtArrecadado= $_POST['txtArrecadado'];   // Recendo o que foi digitado no campo nome do formulário.
 	$txtDescricao= $_POST['txtDescricao'];   // Recendo o que foi digitado no campo nome do formulário.
 
-	$query = mysql_query("INSERT INTO ACAO (NOME, DT_INICIO, DT_FIM, DESCRICAO) VALUES ('$txtNome','$txtDataInicio','$txtDataFim','$txtDescricao')");
+	$query = mysql_query("INSERT INTO ACAO (NOME, DT_INICIO, DT_FIM, GASTO, ARRECADADO, DESCRICAO) VALUES ('$txtNome','$txtDataInicio','$txtDataFim','$txtGasto','$txtArrecadado','$txtDescricao')");
 	$host = "mysql.hostinger.com.br";
 	$db   = "u480003925_jmj";
 	$user = "u480003925_jmj";
@@ -175,9 +168,11 @@ function upDateAcao(){
 	$txtNome = $_POST['txtNome'];   // Recendo o que foi digitado no campo nome do formulário.
 	$txtDataInicio = $_POST['txtDataInicio'];   // Recendo o que foi digitado no campo nome do formulário.
 	$txtDataFim= $_POST['txtDataFim'];   // Recendo o que foi digitado no campo nome do formulário.
+	$txtGasto= $_POST['txtGasto'];   // Recendo o que foi digitado no campo nome do formulário.
+	$txtArrecadado= $_POST['txtArrecadado'];   // Recendo o que foi digitado no campo nome do formulário.
 	$txtDescricao= $_POST['txtDescricao'];   // Recendo o que foi digitado no campo nome do formulário.
 
-	$result = mysql_query("UPDATE ACAO SET NOME='$txtNome', DT_INICIO='$txtDataInicio', DT_FIM='$txtDataFim', DESCRICAO='$txtDescricao' WHERE ID_ACAO=$hdnIdAcao");
+	$result = mysql_query("UPDATE ACAO SET NOME='$txtNome', DT_INICIO='$txtDataInicio', DT_FIM='$txtDataFim',GASTO='$txtGasto',ARRECADADO='$txtArrecadado', DESCRICAO='$txtDescricao' WHERE ID_ACAO=$hdnIdAcao");
 	if ($result != 1) {
 		die('Invalid query: ' . mysql_error());
 	}else{ echo $result;}

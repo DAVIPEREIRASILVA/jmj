@@ -222,6 +222,8 @@ function salvarAcao(){
 		dados += "&txtNome=" + document.getElementById('txtNome').value;
 		dados += "&txtDataInicio=" + document.getElementById('txtDataInicio').value;
 		dados += "&txtDataFim=" + document.getElementById('txtDataFim').value;
+		dados += "&txtGasto=" + document.getElementById('txtGasto').value;
+		dados += "&txtArrecadado=" + document.getElementById('txtArrecadado').value;
 		dados += "&txtDescricao=" + document.getElementById('txtDescricao').value;
 
 		var varResposta = chamar_ajax('../../php/sql.php', 'filtro=upDateAcao&'+dados, false, 'text', null);
@@ -233,6 +235,8 @@ function salvarAcao(){
 	dados = "txtNome=" + document.getElementById('txtNome').value;
 	dados += "&txtDataInicio=" + document.getElementById('txtDataInicio').value;
 	dados += "&txtDataFim=" + document.getElementById('txtDataFim').value;
+	dados += "&txtGasto=" + document.getElementById('txtGasto').value;
+	dados += "&txtArrecadado=" + document.getElementById('txtArrecadado').value;	
 	dados += "&txtDescricao=" + document.getElementById('txtDescricao').value;
 
 	var varResposta = chamar_ajax('../../php/sql.php', 'filtro=cadAcao&'+dados, false, 'text', null);
