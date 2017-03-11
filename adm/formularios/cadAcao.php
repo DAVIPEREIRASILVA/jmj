@@ -108,15 +108,15 @@ $total1 = mysql_num_rows($dados1);
                 	</tr>
                 	<tr>
                 		<td>Valor Gasto:</td>
-                		<td colspan="2"><input type="date" id="txtGasto" size="25" value="<?=$linha['GASTO']?>"></td>
+                		<td colspan="2"><input type="text" id="txtGasto" size="25" value="<?=$linha['GASTO']?>"></td>
                 	</tr>
                 	<tr>
                 		<td>Valor Arrecadado:</td>
-                		<td colspan="2"><input type="date" id="txtArrecadado" size="25" value="<?=$linha['ARRECADADO']?>"></td>
+                		<td colspan="2"><input type="text" id="txtArrecadado" size="25" value="<?=$linha['ARRECADADO']?>"></td>
                 	</tr>
                 	<tr>
                 		<td>Lucro:</td>
-                		<td colspan="2"><input type="date" id="txtLucro" size="25" value="<?=$linha['ARRECADADO']-$linha['GASTO']?>"></td>
+                		<td colspan="2"><input type="text" id="txtLucro" size="25" value="<?=$linha['ARRECADADO']-$linha['GASTO']?>"></td>
                 	</tr>
 					<tr>
                 		<td colspan="3">
