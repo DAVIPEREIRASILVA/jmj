@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang=''>
+<head>
+   <meta charset='utf-8'>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="../css/estilomenu.css">
+   <script src="../js/jquery-1.10.2.js"></script>
+   <script src="../js/script.js"></script>
+   <title>MENU 3 NIVEIS</title>
+</head>
+<body>
+<label id="menu" onClick="startAnimation()"><center>MENU</center></label>
+<br />
+<div id='menuInteiro'>
+	<div id='cssmenu'>
+	<ul>
+	   <li><a href='index.html'><span>Home</span></a></li>
+	   <li class='has-sub'><a href='#'><span>Nivel 1.1</span></a>
+		  <ul>
+			 <li class='has-sub'><a href='#'><span>Nível 2.1</span></a>
+				<ul>
+				   <li><a href='#'><span>Nível 3.1</span></a></li>
+				   <li class='last'><a href='#'><span>Nível 3.2</span></a></li>
+				</ul>
+			 </li>
+			 <li class='has-sub'><a href='#'><span>Nível 2.2</span></a>
+				<ul>
+				   <li><a href='#'><span>Nível 3.3</span></a></li>
+				   <li class='last'><a href='#'><span>Nível 3.4</span></a></li>
+				</ul>
+			 </li>
+			 <li class='last'><a href='#'><span>Nível 2.3</span></a></li>
+		  </ul>
+	   </li>
+	   <li class='has-sub'><a href='#'><span>Nível 1.2</span></a>
+		  <ul>
+			 <li><a href='#'><span>Nível 2.1</span></a></li>
+			 <li class='has-sub'><a href='#'><span>Nível 2.2</span></a>
+				<ul>
+				   <li><a href='#'><span>Nível 3.1</span></a></li>
+				   <li class='last'><a href='#'><span>Nível 3.2</span></a></li>
+				</ul>
+			 </li>
+			 <li class='last'><a href='#'><span>Nível 2.3</span></a></li>
+		  </ul>
+	   </li>
+	   <li class='last'><a href='#'><span>Sair</span></a></li>
+	</ul>
+	</div>
+</div>
+</body>
+<html>
+
+<SCRIPT>
+$("#accordion > li").click(function(){
+
+	if(false == $(this).next().is(':visible')) {
+		$('#accordion > ul').slideUp(300);
+	}
+	$(this).next().slideToggle(300);
+});
+
+$('#accordion > ul:eq(0)').show();
+
+var anima;
+
+function startAnimation() { 
+	var tinicio=220;
+	var tfim=70;
+	var	tamanho;
+	var tmenu = parseInt(window.parent.document.getElementById('fraCorpo').cols);
+	if (tmenu>=tinicio){
+		tamanho = tfim;
+		pace=-10;
+		document.getElementById('menuInteiro').style.visibility = 'hidden';
+	}else{
+		tamanho = tinicio;
+		pace=10;
+		document.getElementById('menuInteiro').style.visibility = 'visible';
+	}
+	
+	anima = setInterval(function(){animation(tamanho,pace)},2);
+}
+
+function animation(x,pace){
+	var menu = window.parent.document.getElementById('fraCorpo');
+	var tmenu = parseInt(window.parent.document.getElementById('fraCorpo').cols);
+	if (tmenu == x){
+		clearInterval(anima);
+	}
+	
+	menu.cols = " " + (tmenu + pace) + ",*";
+}
+
+</SCRIPT>
